@@ -12,9 +12,9 @@
 
 6.Dentro la cartella JS create un singolo file .js con il nome della propria parte.
 
-! I NOMI DEVONO ESSERE TUTTI CON IL NOME MINUSCOLO E TUTTI ATTACCATI IN CAMELCASE O UNITI TRAMITE _ !
 
 Le parti assegnate per ora sono le seguenti:
+
 
 Roberto Fanara: 
 
