@@ -6,11 +6,7 @@
 
 3.Fare un git pull origin ogni volta che si entra nel file;
 
-4.Dentro la cartella assets creare una propria cartella con il nome della propria parte e mettere al suo interno SOLO immagini o source esterne;
-
-5.Dentro la cartella css create un singolo file .css, con il nome della propria parte, alla quale collegate con un @import il file root.css;
-
-6.Dentro la cartella JS create un singolo file .js con il nome della propria parte.
+4.Quando create un nuovo componente importatelo direttamente e unicamente su App
 
 
 Le parti assegnate per ora sono le seguenti:
