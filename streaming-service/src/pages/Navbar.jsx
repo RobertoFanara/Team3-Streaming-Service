@@ -2,11 +2,22 @@ function Navbar() {
     return(
       <>
       <div className="nav-container">
+
         <div className="central-nav">
-         <div className="home-div"><img src="/src/assets/images/home.svg" className="nav-icons"/><p className="nav-name">Home</p></div>
-         <div className="category-div"><img src="/src/assets/images/category.svg" className="category-icon"/><p className="category-name">Categories</p></div>
-         <div className="profile-div"><img src="/src/assets/images/user.svg" className="nav-icons"/><p className="nav-name">Profile</p></div>
+
+        <div className="home-div"><img src="/src/assets/images/home.svg" className="nav-icons"/><p className="nav-name">Home</p></div>
+
+        <div className="category-div">
+          <div className="category-wrap">
+          <img src="/src/assets/images/category.svg" className="category-icon"/>
+          <p className="category-name">
+            Categories
+          </p>
+          </div>
         </div>
+        
+         <div className="profile-div"><img src="/src/assets/images/user.svg" className="nav-icons"/><p className="nav-name">Profile</p></div>
+      </div>
 
         <div className="right-nav">
          <div className="search-zone">

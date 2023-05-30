@@ -119,12 +119,20 @@ body{
     margin-right: auto;
 }
 
-.home-div:hover,
+.category-wrap{
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-div:hover{
+    filter: invert(94%) sepia(94%) saturate(0%) hue-rotate(226deg) brightness(105%) contrast(105%);
+}
+
 .profile-div:hover{
     filter: invert(94%) sepia(94%) saturate(0%) hue-rotate(226deg) brightness(105%) contrast(105%);
 }
 
-.category-div:hover {
+.category-wrap:hover {
     filter: invert(94%) sepia(94%) saturate(0%) hue-rotate(226deg) brightness(105%) contrast(105%);
-    color: white;
 }
