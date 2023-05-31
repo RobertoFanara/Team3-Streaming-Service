@@ -9,7 +9,7 @@ function Navbar() {
         <div className="home-div"><img src="/src/assets/images/home.svg" className="nav-icons"/><p className="nav-name">Home</p></div>
         </Link>
 
-        <Link to="categories">
+        <Link to="/categories">
         <div className="category-div">
           <div className="category-wrap">
           <img src="/src/assets/images/category.svg" className="category-icon"/>
