@@ -3,7 +3,10 @@ function Homepage() {
     return(
       <>
       <Navbar />
-      Homepage
+
+      <div className="example">
+      homepage
+      </div>
       </>
     )
   }

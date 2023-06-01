@@ -3,7 +3,10 @@ function Categories() {
     return(
       <>
       <Navbar />
+
+      <div className="example">
       categories
+      </div>
       </>
     )
   }

@@ -3,7 +3,10 @@ function Profile() {
     return(
       <>
       <Navbar />
+
+      <div className="example">
       profile
+      </div>
       </>
     )
   }
