@@ -1,14 +1,16 @@
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 function Homepage() {
-    return(
-      <>
-      <Navbar />
+  return (
+    <>
+      <div className="flex flex-col justify-center align-center bg-black">
+        <Navbar />
 
-      <div className="example">
-      homepage
+        <div className="flex border-2 w-10 h-10">
+
+        </div>
       </div>
-      </>
-    )
-  }
-  
-  export default Homepage
+    </>
+  );
+}
+
+export default Homepage;
