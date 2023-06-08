@@ -1,6 +1,6 @@
 import "./index.css"
 import React from 'react';
-import Footer from './pages/Footer';
+import Footer from './components/Footer';
 
 function App() {
   return(
