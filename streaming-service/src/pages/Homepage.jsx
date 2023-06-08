@@ -1,12 +1,13 @@
 import Sidebar from "../components/Sidebar"
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 function Homepage() {
   return (
     <>
       <div className="bg-black w-full h-full">
+          <Sidebar />
         <div className="flex flex-col justify-center items-center gap-5">
           <Navbar />
-
           <div className="flex border border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative ">
             <img className="w-full h-full z-0" src="https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg"></img>
             <div className="flex z-10 absolute w-full h-full">
@@ -51,6 +52,7 @@ function Homepage() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );
