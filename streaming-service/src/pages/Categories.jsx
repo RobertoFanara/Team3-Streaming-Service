@@ -1,5 +1,5 @@
-import OurRaccomandation from "../items/OurRaccomandation"
-import Others from "../items/Others"
+import OurRaccomandation from "../components/OurRaccomandation"
+import Others from "../components/Others"
 
 const Categories = () => {
     return(
