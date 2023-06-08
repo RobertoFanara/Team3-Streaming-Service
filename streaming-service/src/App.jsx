@@ -4,6 +4,7 @@ import Categories from "./pages/Categories"
 import Profile from "./pages/Profile"
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 
+
 function App() {
   return(
     <>
@@ -14,6 +15,7 @@ function App() {
       <Route path="profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
+
     </>
   )
 }
