@@ -1,5 +1,4 @@
 
-
 const Others = () => {
     return(
         <>
@@ -122,5 +121,6 @@ const Others = () => {
         </>
     )
 }
+
 
 export default Others
