@@ -42,7 +42,7 @@ function Sidebar(){
                         <input type="search" className="bg-transparent p-1 rounded-lg border border-gray-400 w-[60%]" value={searchFriend}onChange={event => setSearchFriend(event.target.value)}/>
                     </div>
                     <div href="#" className="flex items-center space-x-1 px-2 py-3 text-white">
-                        <span>Amici online:</span>
+                        <span>Amici online - {friends.length}</span>
                     </div>
 
                         {friends.filter(post => {
