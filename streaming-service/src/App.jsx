@@ -5,6 +5,7 @@ import Profile from "./pages/Profile"
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import ChiSiamo from './pages/ChiSiamo';
 import Contattaci from './pages/Contattaci';
+import Footer from './components/Footer'
 
 function App() {
   return(
@@ -17,6 +18,7 @@ function App() {
       <Route path="/chi-siamo" element={<ChiSiamo />} />
       <Route path="/contattaci" element={<Contattaci />} />
       </Routes>
+    <Footer />
     </BrowserRouter>
     </>
   )
