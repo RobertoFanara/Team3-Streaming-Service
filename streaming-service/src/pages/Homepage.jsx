@@ -4,6 +4,7 @@ function Homepage() {
   return (
     <>
       <div className="bg-black w-full h-full">
+        <Sidebar/>
         <div className="flex flex-col justify-center items-center gap-5">
           <Navbar />
 
@@ -25,7 +26,7 @@ function Homepage() {
               </div>
             </div>
           </div>
-          
+
           <div className="flex justify-center items-center flex-col w-full gap-10">
             <div className="flex flex-col justify-start w-[860px] h-[650]">
               <p className="text-white text-[25px]">Trending</p>
