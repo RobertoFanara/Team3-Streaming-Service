@@ -5,7 +5,7 @@ function Homepage() {
     <>
       <div className="bg-black w-full h-full">
         <Sidebar/>
-        <div className="flex flex-col justify-center items-center gap-5">
+        <div className="flex flex-col items-center">
           <Navbar />
 
           <div className="flex border border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative ">

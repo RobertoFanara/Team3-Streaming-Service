@@ -43,7 +43,6 @@ function Navbar() {
           </Link>
         </div>
 
-      </div>
         <div className="flex top-1 right-[30px] items-center absolute gap-5">
           <div className="w-[200px]">
             <button className="bg-[rgb(28,28,28)] ml-[15px] rounded-tl-[5px] rounded-bl-[5px]">
@@ -67,6 +66,7 @@ function Navbar() {
             />
           </div>
         </div>
+      </div>
     </>
   );
 }
