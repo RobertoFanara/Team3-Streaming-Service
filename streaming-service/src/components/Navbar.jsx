@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 function Navbar() {
     return(
       <>
-      <div className="flex justify-center">
+      <div className="flex justify-center absolute left-[50%] -translate-x-[50%]">
 
         <div className="flex justify-center bg-[rgb(28,28,28)] w-[490px] rounded-br-[10px] rounded-bl-[10px]">
         <Link to="/">
