@@ -3,7 +3,7 @@ import { useState } from "react"
 const friends = [
     {
         name: "Alfio Puglisi",
-        imgprofile: "https://media.licdn.com/dms/image/D4E35AQEvOl9bpitRHg/profile-framedphoto-shrink_400_400/0/1657551056768?e=1687359600&v=beta&t=ns4hgJTzDDjC5e8rQc8GFazMixh9dqeN3rkPZqOPuPY",
+        imgprofile: "https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png",
         online: true
     },
     {

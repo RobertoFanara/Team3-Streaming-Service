@@ -13,10 +13,11 @@ function Homepage() {
     } else {
         setDetailsEditing(false)
     }
-}
+  }
+
   return (
     <>
-    { detailsEditing && <FilmDetails/> }
+      { detailsEditing &&  <FilmDetails ciao={'ciao'}/> }
       <div className="bg-black w-full h-full">
         <Sidebar/>
         <div className="flex flex-col items-center">
