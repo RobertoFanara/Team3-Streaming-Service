@@ -2,6 +2,7 @@ import Sidebar from "../components/Sidebar"
 import Navbar from "../components/Navbar";
 import FilmDetails from "../components/FilmDetails";
 import { useState } from "react";
+
 function Homepage() {
 
   const [detailsEditing, setDetailsEditing] = useState(false);
@@ -16,13 +17,12 @@ function Homepage() {
   return (
     <>
     { detailsEditing && <FilmDetails/> }
-
       <div className="bg-black w-full h-full">
         <Sidebar/>
         <div className="flex flex-col items-center">
           <Navbar />
 
-          <div className="flex border border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative ">
+          <div className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative ">
             <img className="w-full h-full z-0" src="https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg"></img>
             <div className="flex z-10 absolute w-full h-full">
               <p className="absolute text-white text-[40px] bottom-[110px] left-[30px]">Una notte da leoni</p>
@@ -45,23 +45,23 @@ function Homepage() {
             <div className="flex flex-col justify-start w-[860px] h-[650]">
               <p className="text-white text-[25px]">Trending</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-between">
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
               </div>
             </div>
             <div className="flex flex-col justify-start w-[860px] h-[650]">
               <p className="text-white text-[25px]">Ultime Uscite</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-between">
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
-                <div className="border border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
+                <div className="border-2 border-[RGB(255,187,56)] h-[290px] w-[270px] rounded-[20px] bg-[rgb(45,45,45)]"></div>
               </div>
             </div>
           </div>
