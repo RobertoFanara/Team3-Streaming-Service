@@ -2,22 +2,34 @@ import { useState } from "react"
 
 const friends = [
     {
-        name: "Alfio Puglisi", imgprofile: "https://media.licdn.com/dms/image/D4E35AQEvOl9bpitRHg/profile-framedphoto-shrink_400_400/0/1657551056768?e=1687359600&v=beta&t=ns4hgJTzDDjC5e8rQc8GFazMixh9dqeN3rkPZqOPuPY", online: true
+        name: "Alfio Puglisi",
+        imgprofile: "https://media.licdn.com/dms/image/D4E35AQEvOl9bpitRHg/profile-framedphoto-shrink_400_400/0/1657551056768?e=1687359600&v=beta&t=ns4hgJTzDDjC5e8rQc8GFazMixh9dqeN3rkPZqOPuPY",
+        online: true
     },
     {
-        name: "Roberto Fanara", imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_400_400/0/1684752485758?e=1687359600&v=beta&t=3WTQtH-RLyNRbwCyJFuvxW08Rj11hjuQOxQU6XWfCZg", online: true
+        name: "Roberto Fanara",
+        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_400_400/0/1684752485758?e=1687359600&v=beta&t=3WTQtH-RLyNRbwCyJFuvxW08Rj11hjuQOxQU6XWfCZg",
+        online: true
     },
     {
-        name: "Paolo Gallitelli", imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687359600&v=beta&t=QzjYVsGdPAk9S2ljwQ-HPz6Z2trc9TJNvfrccC1MIcQ", online: true
+        name: "Paolo Gallitelli",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687359600&v=beta&t=QzjYVsGdPAk9S2ljwQ-HPz6Z2trc9TJNvfrccC1MIcQ",
+        online: true
     },
     {
-        name: "Gabriel Marchegiani", imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_800_800/0/1684174471975?e=1687359600&v=beta&t=DkWIeuch1fH35XSdWxGXy669ReVgDLW9XZhjwX9gO5o", online: true
+        name: "Gabriel Marchegiani",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_800_800/0/1684174471975?e=1687359600&v=beta&t=DkWIeuch1fH35XSdWxGXy669ReVgDLW9XZhjwX9gO5o",
+        online: true
     },
     {
-        name: "Danilo Carbone", imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_800_800/0/1685623380714?e=1687359600&v=beta&t=O4J1FWqIiDOJcxYDJiyyqDDAEltLkrBY17m-ozNHZTM", online: true
+        name: "Danilo Carbone",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_800_800/0/1685623380714?e=1687359600&v=beta&t=O4J1FWqIiDOJcxYDJiyyqDDAEltLkrBY17m-ozNHZTM",
+        online: true
     },
     {
-        name: "Giuseppe Bianconi", imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_800_800/0/1684178170263?e=1687359600&v=beta&t=-nyohXRxLABMOpKLjf-jrEvpZOVDZSYXvKFPWoHI1JM", online: true
+        name: "Giuseppe Bianconi",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_800_800/0/1684178170263?e=1687359600&v=beta&t=-nyohXRxLABMOpKLjf-jrEvpZOVDZSYXvKFPWoHI1JM",
+        online: true
     },
 ]
 
@@ -35,7 +47,7 @@ function Sidebar(){
     }
 
     return<>
-            <div className="absolute top-0 flex">
+            <div className="absolute top-0 flex z-30">
                 <aside className={`flex w-72 flex-col space-y-2 border border-transparent bg-[#1c1c1c] p-2 h-[100vh] text-white ease-in-out duration-500 ${isEditing ? "translate-x-0" : "-translate-x-full"}`}>
                     <div className="flex items-center mb-5">
                         <label className="mr-3">Cerca amici:</label>
