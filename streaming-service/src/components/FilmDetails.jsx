@@ -3,7 +3,7 @@ function FilmDetails(){
     return <>
             <div className="absolute top-[50px] z-30 flex justify-center items-center bg-black h-full w-full">
                 <div className="h-1/2 w-1/2 border-2 border-yellow-600 rounded-lg flex relative">
-                    <div className='text-[#ffbb38] absolute right-0'>
+                    <div className='text-[#ffbb38] absolute top-0 right-0'>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-8 w-8 hover:bg-gray-800 cursor-pointer rounded-md p-1">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>

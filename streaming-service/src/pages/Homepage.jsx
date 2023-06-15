@@ -15,7 +15,7 @@ function Homepage() {
 }
   return (
     <>
-    {detailsEditing && <FilmDetails edit={setDetailsEditingHandler}/>}
+    { detailsEditing && <FilmDetails/> }
 
       <div className="bg-black w-full h-full">
         <Sidebar/>
