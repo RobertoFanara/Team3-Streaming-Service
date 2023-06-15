@@ -5,9 +5,9 @@ const Others = () => {
         <>
             <div className="w-full text-white">
                 <div>Others</div>
-                <div className="flex gap-4 mt-2 overflow-hidden">
+                <div className="flex gap-4 mt-2 overflow-hidden h-[225px]">
                     <a href="" className="w-1/2">
-                    <div className=" w-full h-[120px] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover flex align-center justify-center">
+                    <div className=" w-full h-full rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
                             <div className="w-fit mx-auto">Pirati dei Caraibi</div>
                             <div className="flex align-center justify-center">
@@ -23,7 +23,7 @@ const Others = () => {
                     </a>
 
                     <a href="" className="w-1/2">
-                    <div className="w-full h-[120px] rounded-lg relative bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover flex align-center justify-center">
+                    <div className="w-full h-full rounded-lg relative bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
                             <div className="w-fit mx-auto">Don't Look Up</div>
                             <div className="flex align-center justify-center">
