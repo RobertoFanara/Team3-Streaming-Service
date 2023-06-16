@@ -7,7 +7,7 @@ const Categories = () => {
         <div className="flex align-center justify-center">
             <div className="border border-black h-screen w-96">
                 <OurRaccomandation />
-                <Others />
+                <Others />               
             </div>
         </div>
         </>
