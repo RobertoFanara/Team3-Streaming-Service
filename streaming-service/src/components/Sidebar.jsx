@@ -67,8 +67,8 @@ function Sidebar(){
                             return (<>
                                     <div className="flex flex-column-reverse h-20 items-center gap-5 text-slate-200" key={key}>
                                     <img src={item.imgprofile} className="rounded-full h-16 w-16 bg-cover"/>
-                                    <h3 className="font-bold">{item.name}</h3>
-                                    {item.online && <div className="rounded-full bg-green-500 h-3 w-3"></div>}
+                                    <h3 className="font-bold text-sm">{item.name}</h3>
+                                    {item.online && <div className="ml-auto mr-5 rounded-full bg-green-500 h-3 w-3"></div>}
                                     </div>
                                 </>)
                         })}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Profile.css";
-import Navbar from "../components/Navbar";
 import UserStatus from "../components/UserStatus";
 import Recommendations from "../components/Recommendation";
 import LastViewed from "../components/LastViewed";
@@ -63,7 +62,6 @@ const Profile = () => {
 
   return (
     <>
-      <Navbar />
       <div className="profile-container">
         <div className="profile-header">
           <div className="user-status-container">

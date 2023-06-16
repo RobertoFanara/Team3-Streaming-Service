@@ -8,7 +8,7 @@ function Navbar() {
             <div className="w-[70px] mt-[5px] hover:invert-[94%] hover:sepia-[94%] hover:saturate-[0%] hover:hue-rotate-[226deg] hover:brightness-[105%] hover:contrast-[105%]">
               <img
                 src="/src/assets/images/home.svg"
-                className="w-[25px] h-[25px] w-6/12 invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-px mx-auto"
+                className="h-[25px] w-6/12 invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-px mx-auto"
               />
               <p className="text-center text-[8px] text-[rgb(93,93,93)]">
                 Home
@@ -34,7 +34,7 @@ function Navbar() {
             <div className="w-[70px] mt-[5px] hover:invert-[94%] hover:sepia-[94%] hover:saturate-[0%] hover:hue-rotate-[226deg] hover:brightness-[105%] hover:contrast-[105%]">
               <img
                 src="/src/assets/images/user.svg"
-                className="w-[25px] h-[25px] w-6/12 invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-px mx-auto"
+                className="h-[25px] w-6/12 invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-px mx-auto"
               />
               <p className="text-center text-[8px] text-[rgb(93,93,93)]">
                 Profile
