@@ -6,7 +6,7 @@ function Profile() {
       <Navbar />
       <Sidebar />
       <div className="example">
-      profile
+        profile
       </div>
       </>
     )

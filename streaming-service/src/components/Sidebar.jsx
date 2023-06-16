@@ -1,8 +1,42 @@
 import { useState } from "react"
 
+const friends = [
+    {
+        name: "Alfio Puglisi",
+        imgprofile: "https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png",
+        online: true
+    },
+    {
+        name: "Roberto Fanara",
+        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_400_400/0/1684752485758?e=1687359600&v=beta&t=3WTQtH-RLyNRbwCyJFuvxW08Rj11hjuQOxQU6XWfCZg",
+        online: true
+    },
+    {
+        name: "Paolo Gallitelli",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687359600&v=beta&t=QzjYVsGdPAk9S2ljwQ-HPz6Z2trc9TJNvfrccC1MIcQ",
+        online: true
+    },
+    {
+        name: "Gabriel Marchegiani",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_800_800/0/1684174471975?e=1687359600&v=beta&t=DkWIeuch1fH35XSdWxGXy669ReVgDLW9XZhjwX9gO5o",
+        online: true
+    },
+    {
+        name: "Danilo Carbone",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_800_800/0/1685623380714?e=1687359600&v=beta&t=O4J1FWqIiDOJcxYDJiyyqDDAEltLkrBY17m-ozNHZTM",
+        online: true
+    },
+    {
+        name: "Giuseppe Bianconi",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_800_800/0/1684178170263?e=1687359600&v=beta&t=-nyohXRxLABMOpKLjf-jrEvpZOVDZSYXvKFPWoHI1JM",
+        online: true
+    },
+]
+
 
 function Sidebar(){
     const [isEditing, setIsEditing] = useState(false)
+    const [searchFriend, setSearchFriend] = useState('')
 
     const setEditingHandler = () => {
         if (isEditing === false){
@@ -11,21 +45,33 @@ function Sidebar(){
             setIsEditing(false)
         }
     }
+
     return<>
-            <div className="absolute top-0 flex">
+            <div className="absolute top-0 flex z-30">
                 <aside className={`flex w-72 flex-col space-y-2 border border-transparent bg-[#1c1c1c] p-2 h-[100vh] text-white ease-in-out duration-500 ${isEditing ? "translate-x-0" : "-translate-x-full"}`}>
                     <div className="flex items-center mb-5">
                         <label className="mr-3">Cerca amici:</label>
-                        <input type="search" className="bg-transparent p-1 rounded-lg border border-gray-400 w-[60%]"/>
+                        <input type="search" className="bg-transparent p-1 rounded-lg border border-gray-400 w-[60%]" value={searchFriend}onChange={event => setSearchFriend(event.target.value)}/>
                     </div>
                     <div href="#" className="flex items-center space-x-1 px-2 py-3 text-white">
-                        <span>Amici online:</span>
+                        <span>Amici online - {friends.length}</span>
                     </div>
-                    <div className="flex h-20 items-center gap-5 text-white">
-                        <div className="rounded-full bg-white h-14 w-14"></div>
-                        <h3 className="font-bold">Ciccio Pasticcio</h3>
-                        <div className="rounded-full bg-green-500 h-3 w-3"></div>
-                    </div>
+
+                        {friends.filter(post => {
+                            if (searchFriend === '') {
+                            return post;
+                        } else if (post.name.toLowerCase().includes(searchFriend.toLowerCase())) {
+                            return post;
+                            }
+                        }).map((item, key) => {
+                            return (<>
+                                    <div className="flex flex-column-reverse h-20 items-center gap-5 text-slate-200" key={key}>
+                                    <img src={item.imgprofile} className="rounded-full h-16 w-16 bg-cover"/>
+                                    <h3 className="font-bold">{item.name}</h3>
+                                    {item.online && <div className="rounded-full bg-green-500 h-3 w-3"></div>}
+                                    </div>
+                                </>)
+                        })}
                 </aside>
                 <span className={`text-[#ffbb38] ease-in-out duration-500 ${isEditing ? "translate-x-0" : "-translate-x-[288px]"}`} onClick={setEditingHandler}>
                     {!isEditing && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-14 w-14 bg-[#1c1c1c] hover:bg-gray-800 cursor-pointer rounded-tr-md rounded-br-md p-3">
@@ -41,4 +87,4 @@ function Sidebar(){
             </>
 }
 
-export default Sidebar
+export default Sidebar;

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <>
-      <div className="flex items-center">
+      <div className="flex items-center justify-center">
         <div className="flex justify-center bg-[rgb(28,28,28)] w-[490px] rounded-br-[10px] rounded-bl-[10px]">
           <Link to="/">
             <div className="w-[70px] mt-[5px] hover:invert-[94%] hover:sepia-[94%] hover:saturate-[0%] hover:hue-rotate-[226deg] hover:brightness-[105%] hover:contrast-[105%]">
@@ -43,7 +43,6 @@ function Navbar() {
           </Link>
         </div>
 
-      </div>
         <div className="flex top-1 right-[30px] items-center absolute gap-5">
           <div className="w-[200px]">
             <button className="bg-[rgb(28,28,28)] ml-[15px] rounded-tl-[5px] rounded-bl-[5px]">
@@ -51,7 +50,7 @@ function Navbar() {
             </button>
             <input
               type="text"
-              className="bg-[rgb(28,28,28)] w-[150px] text-base mt-[5px] rounded-tr-[5px] rounded-br-[5px] "
+              className="bg-[rgb(28,28,28)] w-[150px] text-base mt-[5px] rounded-tr-[5px] rounded-br-[5px] text-white"
               placeholder=" Search"
             />
           </div>
@@ -67,6 +66,7 @@ function Navbar() {
             />
           </div>
         </div>
+      </div>
     </>
   );
 }
