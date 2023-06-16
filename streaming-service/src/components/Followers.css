@@ -1,0 +1,9 @@
+.followers {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    font-size: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

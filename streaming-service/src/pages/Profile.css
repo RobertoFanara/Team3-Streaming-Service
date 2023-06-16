@@ -1,0 +1,68 @@
+ .profile-container {
+    width: 100vw;
+    height: 100vh;
+    background: url(../assets/images/profile-background.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.profile-header {
+    border-radius: 5%;
+    padding: 20px;
+    width: 600px;
+    height: 700px;
+    border: 2px solid white;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20%;
+    background: #323232;
+}
+
+.profile-header .profile-header-image {
+    height: 300px;
+    width: 300px;
+    background: url(../assets/images/miles-profile.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.profile-header .profile-header-nickname {
+    padding: 20px;
+    font-size: 32px;
+    font-family: 'roboto';
+}
+
+.profile-header .buttons-container {
+    padding-top: 20%;
+    display: flex;
+    gap: 150px;
+}
+
+.profile-header .buttons-container .message-button {
+    width: 150px;
+    height: 40px;
+    background-color: #FFBB38;
+    color: #323232;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.profile-header .buttons-container .follow-button {
+    width: 150px;
+    height: 40px;
+    background-color: #FFBB38;
+    color: #323232;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.profile-header .buttons-container .follow-button .followed {
+    background-color: bisque;
+}
