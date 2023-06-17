@@ -2,6 +2,7 @@ import './FilmDetails.css';
 function FilmDetails({closeDetails}){
 
     return <>
+        <div className="fixed top-0 z-30 h-screen w-full">
             <div className="absolute top-0 z-30 bg-black/75 h-full w-full flex justify-center items-center">
                 <div className="h-1/2 w-1/2 border-2 border-yellow-600 rounded-lg flex relative z-10">
                     <div className='text-[#ffbb38] absolute top-0 right-0' onClick={closeDetails}>
@@ -31,6 +32,7 @@ function FilmDetails({closeDetails}){
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </>
 }

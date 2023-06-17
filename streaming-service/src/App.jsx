@@ -1,4 +1,3 @@
-import "./index.css"
 import Homepage from "./pages/Homepage"
 import Categories from "./pages/Categories"
 import Profile from "./pages/Profile"
@@ -8,6 +7,8 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Others from "./components/Category/Others/Others"
 import OtherSecondPage from "./components/Category/Others/OtherSecondPage"
+import "./index.css"
+import "./components/scrollbar.css"
 
 
 function App() {
