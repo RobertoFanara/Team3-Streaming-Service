@@ -7,12 +7,10 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Others from "./components/Category/Others/Others"
 import OtherSecondPage from "./components/Category/Others/OtherSecondPage"
-import "./index.css"
-import "./components/scrollbar.css"
-
 import ChiSiamo from './pages/ChiSiamo';
 import Contattaci from './pages/Contattaci';
-import Footer from './components/Footer'
+import "./index.css"
+import "./components/scrollbar.css"
 
 function App() {
 
