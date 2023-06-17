@@ -1,17 +1,35 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./LastViewed.css";
 
 const LastViewed = ({ lastViewed }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="last-viewed">
-      <h3>Last Viewed</h3>
+      <h3 className="text-white last-title">Last viewed</h3>
       {lastViewed.length > 0 ? (
-        <ul>
-          {lastViewed.map((item, index) => (
-            <li key={index}>{item}</li>
+        <Slider {...settings}>
+          {lastViewed.map((lastViewed, index) => (
+            <div key={index} className="carousel-item">
+              <img
+                src={lastViewed.cover}
+                alt={lastViewed.title}
+                className="cover-image"
+              />
+            </div>
           ))}
-        </ul>
+        </Slider>
       ) : (
-        <p>No viewing history available.</p>
+        <p>No recommendations at the moment.</p>
       )}
     </div>
   );

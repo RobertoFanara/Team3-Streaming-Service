@@ -15,6 +15,7 @@ const Recommendations = ({ recommendations }) => {
 
   return (
     <div className="recommendations">
+      <h3 className="text-white reccomendation-title">Reccomendation</h3>
       {recommendations.length > 0 ? (
         <Slider {...settings}>
           {recommendations.map((recommendation, index) => (

@@ -1,6 +1,4 @@
-/* Recommendations.css */
-/* Recommendations.css */
-.recommendations {
+.last-viewed {
     width: 700px;
     height: 700px;
     margin: 0 auto;
@@ -10,36 +8,22 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
-  }
-  
-  .carousel-item {
+}
+
+.carousel-item {
     outline: none;
     max-width: 93px;
-  }
-  
-  .cover-image {
+}
+
+.cover-image {
     max-width: 300px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .cover-image:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Customize the carousel dots */
-  .slick-dots {
-    bottom: -30px;
-  }
-  
-  .slick-dots li button:before {
-    font-size: 12px;
-    color: #fff;
-  }
-  
-  .slick-dots li.slick-active button:before {
-    color: #ff5f6d;
-  }
+}
+
+.cover-image:hover {
+    transform: scale(1.03);
+}
