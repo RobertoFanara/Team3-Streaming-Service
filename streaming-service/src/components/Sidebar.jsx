@@ -47,7 +47,8 @@ function Sidebar(){
     }
 
     return<>
-            <div className="absolute top-0 flex z-30">
+            <div className="fixed top-0 z-30">
+                <div className="absolute top-0 flex">
                 <aside className={`flex w-72 flex-col space-y-2 border border-transparent bg-[#1c1c1c] p-2 h-[100vh] text-white ease-in-out duration-500 ${isEditing ? "translate-x-0" : "-translate-x-full"}`}>
                     <div className="flex items-center mb-5">
                         <label className="mr-3">Cerca amici:</label>
@@ -83,6 +84,7 @@ function Sidebar(){
                         </svg>
                     }
                 </span>
+            </div>
             </div>
             </>
 }
