@@ -10,6 +10,9 @@ import OtherSecondPage from "./components/Category/Others/OtherSecondPage"
 import "./index.css"
 import "./components/scrollbar.css"
 
+import ChiSiamo from './pages/ChiSiamo';
+import Contattaci from './pages/Contattaci';
+import Footer from './components/Footer'
 
 function App() {
 
@@ -25,11 +28,13 @@ function App() {
       <Route path="profile" element={<Profile />} />
       <Route path="others" element={<Others />} />
       <Route path="othersSecondPage" element={<OtherSecondPage />}/>
+      <Route path="/chi-siamo" element={<ChiSiamo />} />
+      <Route path="/contattaci" element={<Contattaci />} />
       </Routes>
-      <Footer/>
+    <Footer />
     </BrowserRouter>
     </>
   )
 }
 
-export default App
+export default App;
