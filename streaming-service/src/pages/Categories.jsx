@@ -1,14 +1,14 @@
-import OurRaccomandation from "../components/OurRaccomandation"
-import Others from "../components/Others"
+import OurRaccomandation from "../components/Category/OurRaccomandation"
+import OthersLittleList from "../components/Category/Others/OthersLittleList"
 
 
 const Categories = () => {
     return(
         <>
-        <div className="flex item-center justify-center ">
+        <div className="flex item-center justify-center mt-10 ">
             <div className="flex flex-col border border-black w-[870px] gap-8">
                 <OurRaccomandation />
-                <Others />               
+                <OthersLittleList />               
             </div>
         </div>
         </>

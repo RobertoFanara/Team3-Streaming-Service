@@ -1,19 +1,41 @@
+import { Link } from "react-router-dom"
 
-const Others = () => {
+const OthersLittleList = () => {
+    const $slider = document.querySelector(".slider")
+
+    const handleScrollRight = () => {
+        $slider.scrollBy({
+            left: 350,
+            behavior: "smooth"
+        })
+    }
+
+    const handleScrollLeft = () => {
+        $slider.scrollBy({
+            left: -350,
+            behavior: "smooth"
+        })
+    }
+
+    const topFunction = () => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+
+
     return(
         <>
             <div className="w-full text-white">
                 <div>Others</div>
                 <div className= "relative">
-                <div className="absolute bg-trasparent w-[50px] h-full z-10 flex justify-center items-center">
+                <div className="absolute bg-trasparent w-[50px] h-full z-10 flex justify-center items-center" onClick={handleScrollLeft}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                     </div>
 
-                    <div className="flex gap-4 mt-2 overflow-auto overflow-x-hidden ">
-                        <a href="" className="w-[200px]">
-                        <div className=" w-[200px] h-[120px] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover flex items-center justify-center">
+                    <div className="slider flex gap-4 mt-2 overflow-auto overflow-x-hidden h-[225px]">
+                        <a href="" className="w-[350px]">
+                        <div className=" w-[350px] h-[100%] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover flex items-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col items-center">
                             <div className="w-fit mx-auto">Pirati dei Caraibi</div>
                             <div className="flex items-center justify-center">
@@ -28,8 +50,8 @@ const Others = () => {
                     </div>
                         </a>
 
-                        <a href="" className="w-[200px]">
-                    <div className="w-[200px] h-[120px] rounded-lg relative bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover flex align-center justify-center">
+                        <a href="" className="w-[350px]">
+                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
                             <div className="w-fit mx-auto">Don't Look Up</div>
                             <div className="flex align-center justify-center">
@@ -44,8 +66,8 @@ const Others = () => {
                     </div>
                         </a>
                         
-                        <a href="" className="w-[200px]">
-                    <div className="w-[200px] h-[120px] rounded-lg relative bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover flex align-center justify-center">
+                        <a href="" className="w-[350px]">
+                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
                             <div className="w-fit mx-auto">Jumanji</div>
                             <div className="flex align-center justify-center">
@@ -60,8 +82,8 @@ const Others = () => {
                     </div>
                         </a>
 
-                        <a href="" className="w-[200px]">
-                    <div className="w-[200px] h-[120px] rounded-lg relative bg-[url('https://www.focus.it/site_stored/imgs/0004/011/spider-man-2002.1020x680.jpg')] bg-cover flex align-center justify-center">
+                        <a href="" className="w-[350px]">
+                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://www.focus.it/site_stored/imgs/0004/011/spider-man-2002.1020x680.jpg')] bg-cover flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
                             <div className="w-fit mx-auto">Spiderman</div>
                             <div className="flex align-center justify-center">
@@ -76,8 +98,8 @@ const Others = () => {
                     </div>
                         </a>
 
-                        <a href="" className="w-[200px]">
-                    <div className="w-[200px] h-[120px] rounded-lg relative bg-[url('https://media-assets.wired.it/photos/615c4917be48be4873e7de03/master/w_1600%2Cc_limit/wired_placeholder_dummy.png')] bg-cover flex align-center justify-center">
+                        <a href="" className="w-[350px]">
+                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://media-assets.wired.it/photos/615c4917be48be4873e7de03/master/w_1600%2Cc_limit/wired_placeholder_dummy.png')] bg-cover flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
                             <div className="w-fit mx-auto">Interstellar</div>
                             <div className="flex align-center justify-center">
@@ -92,8 +114,8 @@ const Others = () => {
                     </div>
                         </a>
 
-                        <a href="" className="w-[200px]">
-                    <div className="w-[200px] h-[120px] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2017/10/059/coverlg_home.jpg')] bg-cover flex align-center justify-center">
+                        <a href="" className="w-[350px]">
+                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2017/10/059/coverlg_home.jpg')] bg-cover flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
                             <div className="w-fit mx-auto">Fast & Furious 9</div>
                             <div className="flex align-center justify-center">
@@ -107,8 +129,16 @@ const Others = () => {
                         </div>
                     </div>
                         </a>
+                    
+                        <Link to={"/others"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center">    
+                                <div className="w-[100px] flex items-center justify-center">
+                                    <div className="h-[20px] w-fit text-black">See Other</div>    
+                                </div>
+                        </Link>
 
-                    <div className="absolute end-0 bg-trasparent w-[50px] h-full z-10 flex justify-center items-center">
+                        
+
+                    <div className="absolute end-0 bg-trasparent w-[50px] h-full z-10 flex justify-center items-center" onClick={handleScrollRight}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
@@ -123,4 +153,4 @@ const Others = () => {
 }
 
 
-export default Others
+export default OthersLittleList

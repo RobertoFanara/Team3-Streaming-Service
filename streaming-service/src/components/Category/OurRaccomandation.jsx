@@ -2,7 +2,7 @@
 const OurRaccomandation = () => {
     return(
         <>
-            <div className="w-full h-[450px] mt-10 flex flex-col align-center justify-center">
+            <div className="w-full h-[450px]  flex flex-col align-center justify-center">
                 <div className="text-white">Our Raccomandation</div>
                 <div className="w-full h-full relative mt-2 bg-[url('https://static.sky.it/images_static/tg24/spettacolo/2019/08/14/James_Cameron/James_Cameron_Avatar.jpg.transform/hero-tablet/ffd5e21ae3ab3803fee4805ee5532d1bc3304f7a/img.jpeg')] bg-center bg-cover bg-no-repeat border-2 rounded-lg border-[RGB(255,187,56)]">
                     <div className="flex absolute w-[80px] h-[75px] bottom-[30px] left-[25px]  hover:fill-yellow-400 hover:text-yellow-400">
