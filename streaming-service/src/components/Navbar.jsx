@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
-    
+
 
   return (
     <>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center bg-black">
         <div className="flex justify-center bg-[rgb(28,28,28)] w-[490px] rounded-br-[10px] rounded-bl-[10px] space-x-28">
           <Link to="/">
             <div className="w-[70px] mt-[5px] hover:invert-[94%] hover:sepia-[94%] hover:saturate-[0%] hover:hue-rotate-[226deg] hover:brightness-[105%] hover:contrast-[105%]">
