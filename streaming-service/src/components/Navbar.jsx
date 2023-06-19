@@ -7,8 +7,9 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex items-center justify-center bg-black">
-        <div className="flex justify-center bg-[rgb(28,28,28)] w-[490px] rounded-br-[10px] rounded-bl-[10px] space-x-28">
+      <div className="flex items-center justify-center bg-transparent">
+        <div className="fixed top-0 z-50">
+        <div className="absolute top-0 flex justify-center bg-[rgb(28,28,28)] w-[490px] rounded-br-[10px] rounded-bl-[10px] space-x-28 -translate-x-1/2">
           <Link to="/">
             <div className="w-[70px] mt-[5px] hover:invert-[94%] hover:sepia-[94%] hover:saturate-[0%] hover:hue-rotate-[226deg] hover:brightness-[105%] hover:contrast-[105%]">
               <img
@@ -46,6 +47,7 @@ function Navbar() {
               </p>
             </div>
           </Link>
+        </div>
         </div>
 
         <div className="flex top-1 right-[30px] items-center absolute gap-5">

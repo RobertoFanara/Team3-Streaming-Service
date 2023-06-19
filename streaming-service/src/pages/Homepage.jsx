@@ -15,7 +15,7 @@ function Homepage() {
 
   return (
     <>
-      <div className="bg-black w-full h-full">
+      <div className="bg-black w-full h-full mt-10">
       { detailsEditing && <FilmDetails closeDetails={setDetailsEditingHandler}/> }
         <div className="flex flex-col items-center">
           <div className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative cursor-pointer" onClick={setDetailsEditingHandler}>
