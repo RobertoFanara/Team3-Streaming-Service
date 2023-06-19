@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import useSound from 'use-sound'
+import boopSfx from '../assets/onclick-sound.mp3';
 import "./Profile.css";
 import UserStatus from "../components/UserStatus";
 import Recommendations from "../components/Recommendation";
@@ -6,12 +8,14 @@ import LastViewed from "../components/LastViewed";
 import Followers from "../components/Followers";
 
 const Profile = () => {
+  const [play] = useSound(boopSfx);
+
   const [user] = useState({
     name: "John Doe",
     email: "johndoe@example.com",
     subscriptionPlan: "Premium",
     profilePicture: "profile-picture.jpg",
-    isOnline: true,
+    isOnline: false,
     currentMovie: "Spider-man into the spiderverse",
   });
 
@@ -91,9 +95,9 @@ const Profile = () => {
           <div className="buttons-container">
             <button className="message-button">Send Message</button>
             <button
-              className={!followed ? "follow-button" : "followed"}
+              className="follow-button"
               disabled={isFollowed}
-              onClick={() => setIsFollowed(true)}
+              onClick={() => {setIsFollowed(true); play()}}
             >
               {isFollowed ? "Followed" : "Follow"}
             </button>
