@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom"
 
-const OthersLittleList = () => {
-    const $slider = document.querySelector(".slider")
+const ComicoLittleList = () => {
+    const $slider3 = document.querySelector(".slider3")
 
     const handleScrollRight = () => {
-        $slider.scrollBy({
+        $slider3.scrollBy({
             left: 350,
             behavior: "smooth"
         })
     }
     
     const handleScrollLeft = () => {
-        $slider.scrollBy({
+        $slider3.scrollBy({
             left: -350,
             behavior: "smooth"
         })
@@ -25,7 +25,7 @@ const OthersLittleList = () => {
     return(
         <>
             <div className="w-full text-white">
-                <div>Others</div>
+                <div>Comico</div>
                 <div className= "relative">
 
                 <div className="before-arrow absolute bg-trasparent w-[50px] h-full flex justify-center items-center z-50" onClick={handleScrollLeft}>
@@ -34,7 +34,7 @@ const OthersLittleList = () => {
                         </svg>
                     </div>
 
-                    <div className="slider flex gap-4 mt-2 overflow-auto overflow-x-hidden h-[225px]">
+                    <div className="slider3 flex gap-4 mt-2 overflow-auto overflow-x-hidden h-[225px]">
                         <a href="" className="w-[350px]">
                         <div className=" w-[350px] h-[100%] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover flex items-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col items-center">
@@ -131,7 +131,7 @@ const OthersLittleList = () => {
                     </div>
                         </a>
                     
-                        <Link to={"/others"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center text-black hover:text-white transition duration-200 ease-in">    
+                        <Link to={"/comico"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center text-black hover:text-white transition duration-200 ease-in">    
                                 <div className="w-[100px] flex items-center justify-center ">
                                     <div className="h-[20px] w-fit text-inherit">See Other</div>    
                                 </div>
@@ -154,4 +154,4 @@ const OthersLittleList = () => {
 }
 
 
-export default OthersLittleList
+export default ComicoLittleList

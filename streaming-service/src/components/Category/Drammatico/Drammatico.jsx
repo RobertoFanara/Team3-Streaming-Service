@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Others = () => {
+const Drammatico = () => {
     const topFunction = () => {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
@@ -347,4 +347,4 @@ const Others = () => {
     )
 } 
 
-export default Others
+export default Drammatico
