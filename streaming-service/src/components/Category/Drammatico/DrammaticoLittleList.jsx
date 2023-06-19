@@ -1,22 +1,34 @@
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
 const DrammaticoLittleList = () => {
-    const $slider4 = document.querySelector(".slider4")
 
     const handleScrollRight = () => {
-        $slider4.scrollBy({
-            left: 350,
-            behavior: "smooth"
+        useEffect(() => {
+            const $slider = document.querySelector(".slider4")
+            const $afterArrow = document.querySelector(".after-arrow4")
+            $afterArrow.addEventListener("click", () => {
+                $slider.scrollBy({
+                    left: 350,
+                    behavior: "smooth"
+                })
+            })
+        })
+    }
+
+    const handleScrollLeft = () => {
+        useEffect(() => {
+            const $slider = document.querySelector(".slider4")
+            const $beforeArrow = document.querySelector(".before-arrow4")
+            $beforeArrow.addEventListener("click", () => {
+                $slider.scrollBy({
+                    left: -350,
+                    behavior: "smooth"
+                })
+            })
         })
     }
     
-    const handleScrollLeft = () => {
-        $slider4.scrollBy({
-            left: -350,
-            behavior: "smooth"
-        })
-    }
-
     const topFunction = () => {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
@@ -28,7 +40,7 @@ const DrammaticoLittleList = () => {
                 <div>Drammatico</div>
                 <div className= "relative">
 
-                <div className="before-arrow absolute bg-trasparent w-[50px] h-full flex justify-center items-center z-50" onClick={handleScrollLeft}>
+                <div className="before-arrow4 absolute bg-trasparent w-[50px] h-full flex justify-center items-center z-50" onClick={handleScrollLeft()}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
@@ -139,7 +151,7 @@ const DrammaticoLittleList = () => {
 
                         
 
-                    <div className="after-arrow absolute end-0 bg-trasparent w-[50px] h-full z-10 flex justify-center items-center" onClick={handleScrollRight}>
+                    <div className="after-arrow4 absolute end-0 bg-trasparent w-[50px] h-full z-10 flex justify-center items-center" onClick={handleScrollRight()}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>

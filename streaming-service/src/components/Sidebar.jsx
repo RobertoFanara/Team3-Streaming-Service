@@ -77,7 +77,7 @@ function Sidebar(){
     }
 
     return<>
-            <div className="fixed top-0 z-30">
+            <div className={`fixed top-0 ${isEditing ? "z-30" : "z-0"}`}>
                 <div className="absolute top-0 flex">
                 <aside className={`flex w-72 flex-col space-y-2 border border-transparent bg-[#1c1c1c] p-2 h-[100vh] text-white ease-in-out duration-500 ${isEditing ? "translate-x-0" : "-translate-x-full"} overflow-auto scroll-m-0`}>
                     <div className="flex items-center mb-5">
