@@ -9,6 +9,9 @@ import Others from "./components/Category/Others/Others"
 import OtherSecondPage from "./components/Category/Others/OtherSecondPage"
 import ChiSiamo from './pages/ChiSiamo';
 import Contattaci from './pages/Contattaci';
+import TerminiDiServizio from './pages/TerminiDiServizio';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Catalogo from './pages/Catalogo';
 import "./index.css"
 import "./components/scrollbar.css"
 
@@ -28,6 +31,9 @@ function App() {
       <Route path="othersSecondPage" element={<OtherSecondPage />}/>
       <Route path="/chi-siamo" element={<ChiSiamo />} />
       <Route path="/contattaci" element={<Contattaci />} />
+      <Route path="/termini-servizio" element={<TerminiDiServizio />} />
+      <Route path="/policy" element={<PrivacyPolicy />} />
+      <Route path="/catalogo" element={<Catalogo />} />
       </Routes>
     <Footer />
     </BrowserRouter>

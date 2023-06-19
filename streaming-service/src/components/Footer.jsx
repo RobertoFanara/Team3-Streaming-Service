@@ -19,10 +19,10 @@ function Footer() {
                 <Link to="/chi-siamo" target="_blank" className="text-gray-800 hover:text-gray-200">Chi siamo</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-200">Termini di servizio</a>
+                <Link to="/termini-servizio" target="_blank" className="text-gray-800 hover:text-gray-200">Termini di Servizio</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-200">Privacy Policy</a>
+                <Link to="/policy" target="_blank" className="text-gray-800 hover:text-gray-200">Privacy Policy</Link>
               </li>
               <li>
                 <Link to="/contattaci" target="_blank" className="text-gray-800 hover:text-gray-200">Contattaci</Link>
@@ -33,16 +33,16 @@ function Footer() {
             <h3 className="mb-4">Servizi</h3>
             <ul className="list-none p-0 m-0">
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-200">Catalogo</a>
+              <Link to="/catalogo" target="_blank" className="text-gray-800 hover:text-gray-200">Catalogo</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</a>
+              <Link to="/contattaci" target="_blank" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</a>
+              <Link to="/contattaci" target="_blank" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-800 hover:text-gray-200">Guida e supporto</a>
+              <Link to="/contattaci" target="_blank" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
               </li>
             </ul>
           </div>

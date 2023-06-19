@@ -4,33 +4,33 @@ function ChiSiamo() {
   const team = [
     {
       role: "Team Lead",
-      name: "Roberto Fanara",
-      linkedin: "https://www.linkedin.com/in/robertofanara/",
+      name: "Roberto Pio Fanara",
+      linkedin: "https://www.linkedin.com/in/roberto-pio-fanara-a2a413276/",
     },
     {
       role: "Membro",
-      name: "Danilo Carbone",
-      linkedin: "https://www.linkedin.com/in/danilocarbone/",
+      name: "Danilo Innocente Carbone",
+      linkedin: "https://www.linkedin.com/in/danilo-innocente-carbone-a06513220/",
     },
     {
       role: "Membro",
       name: "Paolo Gallitelli",
-      linkedin: "https://www.linkedin.com/in/paologallitelli/",
+      linkedin: "https://www.linkedin.com/in/paolo-gallitelli-925475253/",
     },
     {
       role: "Membro",
       name: "Alfio Puglisi",
-      linkedin: "https://www.linkedin.com/in/alfiopuglisi/",
+      linkedin: "https://www.linkedin.com/in/alfio-puglisi-38761922a/",
     },
     {
       role: "Membro",
       name: "Gabriel Marchegiani",
-      linkedin: "https://www.linkedin.com/in/gabrielmarchegiani/",
+      linkedin: "https://www.linkedin.com/in/gabriel-marchegiani/",
     },
     {
       role: "Membro",
       name: "Giuseppe Bianconi",
-      linkedin: "https://www.linkedin.com/in/giuseppebianconi/",
+      linkedin: "https://www.linkedin.com/in/giuseppe-bianconi-934b97144/",
     },
   ];
 
