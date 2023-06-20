@@ -1,17 +1,28 @@
 /* Recommendations.css */
 /* Recommendations.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .recommendations {
     width: 700px;
     height: 700px;
     margin: 0 auto;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.789);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #ffbb38;
   }
   
+  .recommendations .reccomendation-title {
+    font-size: 64px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 5px;
+    color: #ffbb38;
+  }
+
   .carousel-item {
     outline: none;
     max-width: 93px;

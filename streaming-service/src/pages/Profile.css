@@ -15,13 +15,13 @@
     padding: 20px;
     width: 600px;
     height: 700px;
-    border: 2px solid white;
+    border: 2px solid #FFBB38;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     top: 20%;
-    background: #323232;
+    background: rgba(0, 0, 0, 0.789);
     font-weight: 600;
 }
 
@@ -38,11 +38,13 @@
 .profile-header .profile-header-nickname {
     padding: 20px;
     font-size: 32px;
-    font-family: 'roboto';
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    font-weight: 100;
 }
 
 .profile-header .buttons-container {
-    padding-top: 20%;
+    padding-top: 10%;
     display: flex;
     gap: 150px;
 }
@@ -63,6 +65,7 @@
     color: #323232;
     cursor: pointer;
     border-radius: 20px;
+    text-align: center;
 }
 
 .profile-header .buttons-container .follow-button .followed {
@@ -72,12 +75,10 @@
 .user-status-container {
     width: fit-content;
     height: 50px;
-    border: 1px solid white;
     padding: 10px;
     text-align: center;
-    background-color: rgb(173, 160, 160, 0.5);
     margin-bottom: 20px;
-    color: black;
+    color: white;
     border-radius: 20px;
 }
 /* .profile-right {

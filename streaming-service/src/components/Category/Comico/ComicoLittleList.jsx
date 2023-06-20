@@ -1,12 +1,12 @@
 import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
-const OthersLittleList = () => {
+const ComicoLittleList = () => {
 
     const handleScrollRight = () => {
         useEffect(() => {
-            const $slider = document.querySelector(".slider")
-            const $afterArrow = document.querySelector(".after-arrow")
+            const $slider = document.querySelector(".slider3")
+            const $afterArrow = document.querySelector(".after-arrow3")
             $afterArrow.addEventListener("click", () => {
                 $slider.scrollBy({
                     left: 350,
@@ -18,8 +18,8 @@ const OthersLittleList = () => {
 
     const handleScrollLeft = () => {
         useEffect(() => {
-            const $slider = document.querySelector(".slider")
-            const $beforeArrow = document.querySelector(".before-arrow")
+            const $slider = document.querySelector(".slider3")
+            const $beforeArrow = document.querySelector(".before-arrow3")
             $beforeArrow.addEventListener("click", () => {
                 $slider.scrollBy({
                     left: -350,
@@ -37,16 +37,16 @@ const OthersLittleList = () => {
     return(
         <>
             <div className="w-full text-white">
-                <div>Others</div>
+                <div>Comico</div>
                 <div className= "relative">
 
-                <div className="before-arrow absolute bg-trasparent w-[50px] h-full flex justify-center items-center z-10" onClick={handleScrollLeft()}>
+                <div className="before-arrow3 absolute bg-trasparent w-[50px] h-full flex justify-center items-center z-50" onClick={handleScrollLeft()}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                         </svg>
                     </div>
 
-                    <div className="slider flex gap-4 mt-2 overflow-auto overflow-x-hidden h-[225px]">
+                    <div className="slider3 flex gap-4 mt-2 overflow-auto overflow-x-hidden h-[225px]">
                         <a href="" className="w-[350px]">
                         <div className=" w-[350px] h-[100%] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover flex items-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col items-center">
@@ -143,7 +143,7 @@ const OthersLittleList = () => {
                     </div>
                         </a>
                     
-                        <Link to={"/others"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center text-black hover:text-white transition duration-200 ease-in">    
+                        <Link to={"/comico"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center text-black hover:text-white transition duration-200 ease-in">    
                                 <div className="w-[100px] flex items-center justify-center ">
                                     <div className="h-[20px] w-fit text-inherit">See Other</div>    
                                 </div>
@@ -151,7 +151,7 @@ const OthersLittleList = () => {
 
                         
 
-                    <div className="after-arrow absolute end-0 bg-trasparent w-[50px] h-full z-10 flex justify-center items-center" onClick={handleScrollRight()}>
+                    <div className="after-arrow3 absolute end-0 bg-trasparent w-[50px] h-full z-10 flex justify-center items-center" onClick={handleScrollRight()}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
@@ -166,4 +166,4 @@ const OthersLittleList = () => {
 }
 
 
-export default OthersLittleList
+export default ComicoLittleList

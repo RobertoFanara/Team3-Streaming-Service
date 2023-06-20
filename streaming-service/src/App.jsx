@@ -17,6 +17,10 @@ import Dispositivi from './pages/Dispositivi';
 import GuidaSupporto from './pages/GuidaSupporto';
 import "./index.css"
 import "./components/scrollbar.css"
+import Animazione from "./components/Category/Animazione/Animazione"
+import Avventura from "./components/Category/Avventura/Avventura"
+import Comico from "./components/Category/Comico/Comico"
+import Drammatico from "./components/Category/Drammatico/Drammatico"
 
 function App() {
 
@@ -32,6 +36,10 @@ function App() {
       <Route path="profile" element={<Profile />} />
       <Route path="others" element={<Others />} />
       <Route path="othersSecondPage" element={<OtherSecondPage />}/>
+      <Route path="animazione" element={<Animazione />} />
+      <Route path="avventura" element={<Avventura />}/>
+      <Route path="drammatico" element={<Drammatico />}/>
+      <Route path="comico" element={<Comico />}/>
       <Route path="/chi-siamo" element={<ChiSiamo />} />
       <Route path="/contattaci" element={<Contattaci />} />
       <Route path="/termini-servizio" element={<TerminiDiServizio />} />

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from 'react-router-dom';
 import facebook from "../assets/images/facebook.svg"
 import instagram from "../assets/images/instagram.svg"
@@ -6,7 +5,7 @@ import twitter from "../assets/images/twitter.svg"
 
 function Footer() {
   return (
-    <footer className="bg-yellow-300 p-6 mt-10">
+    <footer className="bg-yellow-300 p-6">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
           <div className="footer_logo">
@@ -16,16 +15,16 @@ function Footer() {
             <h3 className="mb-4">Informazioni</h3>
             <ul className="list-none p-0 m-0">
               <li>
-                <Link to="/chi-siamo" target="_blank" className="text-gray-800 hover:text-gray-200">Chi siamo</Link>
+                <Link to="/chi-siamo" className="text-gray-800 hover:text-gray-200">Chi siamo</Link>
               </li>
               <li>
-                <Link to="/termini-servizio" target="_blank" className="text-gray-800 hover:text-gray-200">Termini di Servizio</Link>
+                <Link to="/termini-servizio" className="text-gray-800 hover:text-gray-200">Termini di Servizio</Link>
               </li>
               <li>
-                <Link to="/policy" target="_blank" className="text-gray-800 hover:text-gray-200">Privacy Policy</Link>
+                <Link to="/policy" className="text-gray-800 hover:text-gray-200">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/contattaci" target="_blank" className="text-gray-800 hover:text-gray-200">Contattaci</Link>
+                <Link to="/contattaci" className="text-gray-800 hover:text-gray-200">Contattaci</Link>
               </li>
             </ul>
           </div>
@@ -33,9 +32,10 @@ function Footer() {
             <h3 className="mb-4">Servizi</h3>
             <ul className="list-none p-0 m-0">
               <li>
-              <Link to="/catalogo" target="_blank" className="text-gray-800 hover:text-gray-200">Catalogo</Link>
+              <Link to="/catalogo" className="text-gray-800 hover:text-gray-200">Catalogo</Link>
               </li>
               <li>
+<<<<<<< HEAD
               <Link to="/piani-abbonamento" target="_blank" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
               </li>
               <li>
@@ -43,6 +43,15 @@ function Footer() {
               </li>
               <li>
               <Link to="/guida" target="_blank" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
+=======
+              <Link to="/contattaci" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
+              </li>
+              <li>
+              <Link to="/contattaci" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</Link>
+              </li>
+              <li>
+              <Link to="/contattaci" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
+>>>>>>> 0df4042e2ea1dbea4cdb832289cbcb9fee62e020
               </li>
             </ul>
           </div>
