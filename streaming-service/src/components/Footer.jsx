@@ -35,7 +35,6 @@ function Footer() {
               <Link to="/catalogo" className="text-gray-800 hover:text-gray-200">Catalogo</Link>
               </li>
               <li>
-<<<<<<< HEAD
               <Link to="/piani-abbonamento" target="_blank" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
               </li>
               <li>
@@ -43,15 +42,6 @@ function Footer() {
               </li>
               <li>
               <Link to="/guida" target="_blank" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
-=======
-              <Link to="/contattaci" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
-              </li>
-              <li>
-              <Link to="/contattaci" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</Link>
-              </li>
-              <li>
-              <Link to="/contattaci" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
->>>>>>> 0df4042e2ea1dbea4cdb832289cbcb9fee62e020
               </li>
             </ul>
           </div>
