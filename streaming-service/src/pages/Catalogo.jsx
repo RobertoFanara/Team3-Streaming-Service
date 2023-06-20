@@ -105,16 +105,36 @@ const Catalogo = () => {
   ];
 
   return (
-    <section className="bg-black text-white py-10">
-      <div className="container mx-auto px-4">
+    <section className="bg-black text-black py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
         <h3 className="text-4xl font-bold mb-4 lg:text-center">
-          Catalogo di film più visti dai nostri abbonati !
+          Catalogo di film più visti dai nostri abbonati!
         </h3>
         <ul className="text-sm">
           {filmList.map((film, index) => (
             <li key={index} className="mb-4">
-              <h4 className="text-xl font-bold">{film.title}</h4>
-              <p className="text-xs text-gray-400">
+              <div className="flex items-center">
+                {index === 0 && (
+                  <span className="text-2xl font-bold mr-2" style={{ color: "gold" }}>
+                    1
+                  </span>
+                )}
+                {index === 1 && (
+                  <span className="text-2xl font-bold mr-2" style={{ color: "silver" }}>
+                    2
+                  </span>
+                )}
+                {index === 2 && (
+                  <span className="text-2xl font-bold mr-2" style={{ color: "saddlebrown" }}>
+                    3
+                  </span>
+                )}
+                {index > 2 && (
+                  <span className="text-2xl font-bold mr-2">{index + 1}</span>
+                )}
+                <h4 className="text-xl font-bold">{film.title}</h4>
+              </div>
+              <p className="text-xs text-black-400">
                 Regista: {film.director} ({film.year})
               </p>
             </li>

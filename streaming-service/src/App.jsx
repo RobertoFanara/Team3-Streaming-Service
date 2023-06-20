@@ -12,6 +12,9 @@ import Contattaci from './pages/Contattaci';
 import TerminiDiServizio from './pages/TerminiDiServizio';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Catalogo from './pages/Catalogo';
+import PianoAbbonamento from './pages/PianoAbbonamento';
+import Dispositivi from './pages/Dispositivi';
+import GuidaSupporto from './pages/GuidaSupporto';
 import "./index.css"
 import "./components/scrollbar.css"
 
@@ -34,6 +37,9 @@ function App() {
       <Route path="/termini-servizio" element={<TerminiDiServizio />} />
       <Route path="/policy" element={<PrivacyPolicy />} />
       <Route path="/catalogo" element={<Catalogo />} />
+      <Route path="/piani-abbonamento" element={<PianoAbbonamento />} />
+      <Route path="/dispositivi" element={<Dispositivi />} />
+      <Route path="/guida" element={<GuidaSupporto />} />
       </Routes>
     <Footer />
     </BrowserRouter>

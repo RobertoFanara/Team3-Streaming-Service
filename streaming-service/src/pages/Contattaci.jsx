@@ -3,7 +3,7 @@ import React from 'react';
 const Contattaci = () => {
   return (
     <section className="bg-black text-black py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-12 pt-5 pb-7">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
         <div className="lg:text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contattaci</h2>
           <p className="mt-2 leading-6 text-black">Hai domande o suggerimenti? Contattaci utilizzando il modulo sottostante.</p>
