@@ -35,8 +35,8 @@ function ChiSiamo() {
   ];
 
   return (
-    <section className="bg-black text-black py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
+    <section className="bg-black text-black py-20">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
         <h1 className="text-3xl text-center font-bold mb-4">Chi c'è dietro le quinte ?</h1>
         <div className="grid grid-cols-2 text-center gap-4">
           <div className="col-span-2 text-center">

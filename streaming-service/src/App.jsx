@@ -15,6 +15,8 @@ import Catalogo from './pages/Catalogo';
 import PianoAbbonamento from './pages/PianoAbbonamento';
 import Dispositivi from './pages/Dispositivi';
 import GuidaSupporto from './pages/GuidaSupporto';
+import CentroAssistenza from './pages/CentroAssistenza';
+import SegnalaProblema from "./pages/SegnalaProblema"
 import "./index.css"
 import "./components/scrollbar.css"
 import Animazione from "./components/Category/Animazione/Animazione"
@@ -48,6 +50,8 @@ function App() {
       <Route path="/piani-abbonamento" element={<PianoAbbonamento />} />
       <Route path="/dispositivi" element={<Dispositivi />} />
       <Route path="/guida" element={<GuidaSupporto />} />
+      <Route path="/centro-assistenza" element={<CentroAssistenza />} />
+      <Route path="/segnala-problema" element={<SegnalaProblema />} />
       </Routes>
     <Footer />
     </BrowserRouter>
