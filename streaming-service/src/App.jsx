@@ -23,6 +23,7 @@ import Animazione from "./components/Category/Animazione/Animazione"
 import Avventura from "./components/Category/Avventura/Avventura"
 import Comico from "./components/Category/Comico/Comico"
 import Drammatico from "./components/Category/Drammatico/Drammatico"
+import Azione from "./components/Category/Azione/Azione"
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       <Route path="others" element={<Others />} />
       <Route path="othersSecondPage" element={<OtherSecondPage />}/>
       <Route path="animazione" element={<Animazione />} />
+      <Route path="azione" element={<Azione />} />
       <Route path="avventura" element={<Avventura />}/>
       <Route path="drammatico" element={<Drammatico />}/>
       <Route path="comico" element={<Comico />}/>

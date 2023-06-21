@@ -2,12 +2,12 @@ import { Link } from "react-router-dom"
 
 const Avventura = () => {
     const topFunction = () => {
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
     return(
         <>
-            <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)]">
+            <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)] pt-[50px] pb-[30px]">
                 <div className="flex border border-black w-[870px] gap-5 flex-wrap">
 
                 <div className="w-[100%] flex flex-wrap gap-5">
@@ -25,7 +25,7 @@ const Avventura = () => {
                                 <div className="text-sm">8.1</div>
                             </div>
                         </div>
-                        <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out z-50">
+                        <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
                            
                         </div>

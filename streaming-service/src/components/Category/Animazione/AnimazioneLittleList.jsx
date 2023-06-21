@@ -31,7 +31,7 @@ const AnimazioneLittleList = () => {
     
 
     const topFunction = () => {
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
 

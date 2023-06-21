@@ -2,12 +2,12 @@ import { Link } from "react-router-dom"
 
 const OtherSecondPage = () => {
     const topFunction = () => {
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
     return(
         <>
-            <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)]">
+            <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)] pt-[50px] pb-[30px]">
                 <div className="flex border border-black w-[870px] gap-5 flex-wrap">
 
                 <div className="w-[100%] flex flex-wrap gap-5">

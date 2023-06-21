@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-const Drammatico = () => {
+const Azione = () => {
     const topFunction = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }
@@ -13,16 +13,16 @@ const Drammatico = () => {
                 <div className="w-[100%] flex flex-wrap gap-5">
 
                 <a href="" className="w-[23.25%] hover:text-white transition duration-300 ease-in-out">
-                    <div className="w-[100%] h-[250px] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover bg-center flex align-center justify-center border border-[RGB(255,187,56)]">
+                    <div className="w-[100%] h-[250px] rounded-lg relative bg-[url('https://metropolitanmagazine.it/wp-content/uploads/2020/10/Gli-Incredibili-2.jpg')] bg-cover bg-center flex align-center justify-center border border-[RGB(255,187,56)]">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
-                            <div className="w-fit mx-auto">Pirati dei Caraibi</div>
+                            <div className="w-fit mx-auto">Gli Incredibili</div>
                             <div className="flex align-center justify-center">
                                 <div className="w-[20px] h-[20px]">
                                     <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
 	                                C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
 	                                c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
                                 </div>
-                                <div className="text-sm">8.1</div>
+                                <div className="text-sm">7.8</div>
                             </div>
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
@@ -336,7 +336,7 @@ const Drammatico = () => {
                      
                      <div className="w-[100%] flex items-center justify-center text-2xl space-x-2">
                         <div>1</div>
-                        <Link to={"/OthersSecondPage"} onClick={topFunction} >
+                        <Link to={"/AzioneSecondPage"} onClick={topFunction} >
                             <div>»</div>
                         </Link>
                      </div>
@@ -347,4 +347,4 @@ const Drammatico = () => {
     )
 } 
 
-export default Drammatico
+export default Azione
