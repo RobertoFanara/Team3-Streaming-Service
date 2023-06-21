@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
+
+  const [profileSetting, setProfileSetting] = useState(false)
+
+  const handleSettingProfile = () => {
+    if (profileSetting === false) {
+      setProfileSetting(true)
+    } else {
+      setProfileSetting(false)
+    }
+  }
 
   const topFunction = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -37,7 +47,7 @@ const handleCategoriesAppear = () => {
   useEffect(() => {
     const $category = document.querySelector(".category");
     const $categoryList = document.querySelector(".category-list");
-    
+
     $category.addEventListener("click", () => {
         let clicked = true
         if(clicked === true){
@@ -57,7 +67,7 @@ const handleCategoriesDisappear = () => {
     const $home = document.querySelector(".home");
     const $categoryList = document.querySelector(".category-list");
     const $profile = document.querySelector(".profile");
-    
+
     $home.addEventListener("click", () => {
         let clicked = true
         if(clicked === true){
@@ -111,7 +121,7 @@ const handleCategoriesDisappear = () => {
               </Link>
             </div>
                 <div className="relative category-list hidden h-[100%]">
-                  
+
                   <div className="before-arrow-search absolute bg-trasparent w-[30px] h-full flex justify-center items-center z-50" onClick={handleScrollSearchRight()} >
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -131,7 +141,7 @@ const handleCategoriesDisappear = () => {
                   <Link to={"/avventura"} onClick={topFunction}  className="py-[10px] flex items-center hover:text-white transition duration-200 ease-in-out"><div >Avventura</div></Link>
                   <Link to={"/animazione"} onClick={topFunction}  className="py-[10px] flex items-center hover:text-white transition duration-200 ease-in-out"><div >Animazione</div></Link>
                   <Link to={"/comico"} onClick={topFunction}  className="py-[10px] flex items-center hover:text-white transition duration-200 ease-in-out"><div >Comico</div></Link>
-                  <Link to={"/drammatico"} onClick={topFunction}  className="py-[10px] flex items-center hover:text-white transition duration-200 ease-in-out"><div >Drammatico</div></Link> 
+                  <Link to={"/drammatico"} onClick={topFunction}  className="py-[10px] flex items-center hover:text-white transition duration-200 ease-in-out"><div >Drammatico</div></Link>
                   </div>
                 </div>
           </div>
@@ -142,7 +152,7 @@ const handleCategoriesDisappear = () => {
                 src="/src/assets/images/user.svg"
                 className=" w-6/12 invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-px mx-auto"
               />
-              <p className="text-center text-[8px] text-[rgb(93,93,93)]">
+              <p className="text-center text-[8px] text-[#5d5d5d]">
                 Profile
               </p>
             </div>
@@ -167,10 +177,22 @@ const handleCategoriesDisappear = () => {
               src="/src/assets/images/bell.svg"
               className="w-[20px] h-[20px] invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-2.5"
             />
-            <img
-              src="/src/assets/images/profile.svg"
-              className="w-[40px] h-[40px] invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-[5px]"
-            />
+            <div>
+              <img
+                src="/src/assets/images/profile.svg"
+                className="w-[40px] h-[40px] invert-[37%] sepia-[0%] saturate-[1649%] hue-rotate-[338deg] brightness-[96%] contrast-[93%] mt-[5px] cursor-pointer rounded-md"
+                onClick={handleSettingProfile}
+              />
+
+              {profileSetting && <div className="text-[#a7a7a7] rounded-md absolute right-0 bg-zinc-900 w-40">
+                <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Film Preferiti</div>
+                <Link to="/piani-abbonamento">
+                  <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Abbonamento</div>
+                </Link>
+                <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Impostazioni</div>
+                <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Logout</div>
+                </div>}
+            </div>
           </div>
         </div>
       </div>
