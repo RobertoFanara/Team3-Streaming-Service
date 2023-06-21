@@ -5,7 +5,7 @@ import twitter from "../assets/images/twitter.svg"
 
 function Footer() {
   return (
-    <footer className="bg-[#ffbb38] p-6 m-5">
+    <footer className="bg-[#ffbb38] p-6 mt-5">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
           <div className="footer_logo">
