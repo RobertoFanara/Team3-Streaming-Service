@@ -8,27 +8,27 @@ const friends = [
     },
     {
         name: "Roberto Fanara",
-        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_400_400/0/1684752485758?e=1687359600&v=beta&t=3WTQtH-RLyNRbwCyJFuvxW08Rj11hjuQOxQU6XWfCZg",
+        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_800_800/0/1684752485758?e=1687986000&v=beta&t=MMMLsg_CqMO6T5YX7DAWpp71wYPuDNhFnwXaMWZAar8",
         online: true
     },
     {
         name: "Paolo Gallitelli",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687359600&v=beta&t=QzjYVsGdPAk9S2ljwQ-HPz6Z2trc9TJNvfrccC1MIcQ",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687986000&v=beta&t=08H0ZDUJ2V9_tYZrEZSv1hSxbZnRizkVGBsHiOtQ0PU",
         online: true
     },
     {
         name: "Gabriel Marchegiani",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_800_800/0/1684174471975?e=1687359600&v=beta&t=DkWIeuch1fH35XSdWxGXy669ReVgDLW9XZhjwX9gO5o",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_400_400/0/1684174471975?e=1687986000&v=beta&t=NQsDrOyg55fgO3x1uPcuVwE-jjXbwpVUvGzlRcUuShA",
         online: true
     },
     {
         name: "Danilo Carbone",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_800_800/0/1685623380714?e=1687359600&v=beta&t=O4J1FWqIiDOJcxYDJiyyqDDAEltLkrBY17m-ozNHZTM",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_400_400/0/1685623380714?e=1687986000&v=beta&t=j1TYZwmX_iTAcCA86d2RMbwnyAVNFEYZjryCeFGv7mQ",
         online: true
     },
     {
         name: "Giuseppe Bianconi",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_800_800/0/1684178170263?e=1687359600&v=beta&t=-nyohXRxLABMOpKLjf-jrEvpZOVDZSYXvKFPWoHI1JM",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_400_400/0/1684178170263?e=1687986000&v=beta&t=dEjQ14DxrYoMMWGOzUo4DBOzI_9WwzSfLH1w-nKFV48",
         online: true
     },
     {
@@ -38,27 +38,27 @@ const friends = [
     },
     {
         name: "Roberto Fanara",
-        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_400_400/0/1684752485758?e=1687359600&v=beta&t=3WTQtH-RLyNRbwCyJFuvxW08Rj11hjuQOxQU6XWfCZg",
+        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_800_800/0/1684752485758?e=1687986000&v=beta&t=MMMLsg_CqMO6T5YX7DAWpp71wYPuDNhFnwXaMWZAar8",
         online: true
     },
     {
         name: "Paolo Gallitelli",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687359600&v=beta&t=QzjYVsGdPAk9S2ljwQ-HPz6Z2trc9TJNvfrccC1MIcQ",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687986000&v=beta&t=08H0ZDUJ2V9_tYZrEZSv1hSxbZnRizkVGBsHiOtQ0PU",
         online: true
     },
     {
         name: "Gabriel Marchegiani",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_800_800/0/1684174471975?e=1687359600&v=beta&t=DkWIeuch1fH35XSdWxGXy669ReVgDLW9XZhjwX9gO5o",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_400_400/0/1684174471975?e=1687986000&v=beta&t=NQsDrOyg55fgO3x1uPcuVwE-jjXbwpVUvGzlRcUuShA",
         online: true
     },
     {
         name: "Danilo Carbone",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_800_800/0/1685623380714?e=1687359600&v=beta&t=O4J1FWqIiDOJcxYDJiyyqDDAEltLkrBY17m-ozNHZTM",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_400_400/0/1685623380714?e=1687986000&v=beta&t=j1TYZwmX_iTAcCA86d2RMbwnyAVNFEYZjryCeFGv7mQ",
         online: true
     },
     {
         name: "Giuseppe Bianconi",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_800_800/0/1684178170263?e=1687359600&v=beta&t=-nyohXRxLABMOpKLjf-jrEvpZOVDZSYXvKFPWoHI1JM",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_400_400/0/1684178170263?e=1687986000&v=beta&t=dEjQ14DxrYoMMWGOzUo4DBOzI_9WwzSfLH1w-nKFV48",
         online: true
     }
 ]
