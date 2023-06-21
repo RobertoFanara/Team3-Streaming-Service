@@ -40,7 +40,7 @@
   .cover-image:hover {
     transform: scale(1.1);
   }
-  
+
   /* Customize the carousel dots */
   .slick-dots {
     bottom: -30px;
@@ -53,4 +53,17 @@
   
   .slick-dots li.slick-active button:before {
     color: #ff5f6d;
+  }
+
+  
+  @media (max-width: 2000px) {
+    .recommendations {
+      width: 500px;
+      justify-content: space-around;
+    }
+
+    .cover-image {
+      display: block;
+      margin: 0 auto;
+    }
   }
