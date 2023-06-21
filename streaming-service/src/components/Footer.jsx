@@ -35,13 +35,13 @@ function Footer() {
               <Link to="/catalogo" className="text-gray-800 hover:text-gray-200">Catalogo</Link>
               </li>
               <li>
-              <Link to="/piani-abbonamento" target="_blank" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
+              <Link to="/piani-abbonamento" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
               </li>
               <li>
-              <Link to="/dispositivi" target="_blank" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</Link>
+              <Link to="/dispositivi" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</Link>
               </li>
               <li>
-              <Link to="/guida" target="_blank" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
+              <Link to="/guida" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
               </li>
             </ul>
           </div>
