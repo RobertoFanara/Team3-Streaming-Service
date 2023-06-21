@@ -3,7 +3,7 @@ import { useState } from "react"
 const friends = [
     {
         name: "Alfio Puglisi",
-        imgprofile: "https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png",
+        imgprofile: "https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/279222191_1904293366431839_7754633369684283708_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=hhhkt3oCMXAAX8G13ML&_nc_ht=scontent-fco2-1.xx&oh=00_AfBxQEoXmAbdd8fI1_473LzK7k145xiVlkIBSl2F7z6Q0g&oe=64989F7B",
         online: true
     },
     {
@@ -33,7 +33,7 @@ const friends = [
     },
     {
         name: "Alfio Puglisi",
-        imgprofile: "https://media.licdn.com/media/AAYQAQSOAAgAAQAAAAAAAB-zrMZEDXI2T62PSuT6kpB6qg.png",
+        imgprofile: "https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/279222191_1904293366431839_7754633369684283708_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=hhhkt3oCMXAAX8G13ML&_nc_ht=scontent-fco2-1.xx&oh=00_AfBxQEoXmAbdd8fI1_473LzK7k145xiVlkIBSl2F7z6Q0g&oe=64989F7B",
         online: true
     },
     {
