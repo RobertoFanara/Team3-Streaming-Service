@@ -102,7 +102,7 @@ const handleCategoriesDisappear = () => {
         $category1.addClass("text-white")
       }
       const category1Function = handleFocusCategory1;
-      
+
     })
   }
 
@@ -200,7 +200,7 @@ const handleCategoriesDisappear = () => {
                 onClick={handleSettingProfile}
               />
 
-              {profileSetting && <div className="text-[#a7a7a7] rounded-md absolute right-0 bg-zinc-900 w-40">
+              {profileSetting && <div className="text-[#a7a7a7] rounded-md absolute right-0 bg-zinc-900 w-40" onClick={handleSettingProfile}>
                 <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Film Preferiti</div>
                 <Link to="/piani-abbonamento">
                   <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Abbonamento</div>

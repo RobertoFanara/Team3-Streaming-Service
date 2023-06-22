@@ -10,12 +10,12 @@ const friends = [
     {
         name: "Roberto Fanara",
         imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_800_800/0/1684752485758?e=1687986000&v=beta&t=MMMLsg_CqMO6T5YX7DAWpp71wYPuDNhFnwXaMWZAar8",
-        online: true
+        online: false
     },
     {
         name: "Paolo Gallitelli",
         imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687986000&v=beta&t=08H0ZDUJ2V9_tYZrEZSv1hSxbZnRizkVGBsHiOtQ0PU",
-        online: true
+        online: false
     },
     {
         name: "Gabriel Marchegiani",
@@ -40,7 +40,7 @@ const friends = [
     {
         name: "Giovanna Catalano",
         imgprofile: "https://cdn.pixabay.com/photo/2018/02/21/08/40/woman-3169726_1280.jpg",
-        online: true
+        online: false
     },
     {
         name: "Giuseppe Verdi",
@@ -50,7 +50,7 @@ const friends = [
     {
         name: "Ciccio Pasticcio",
         imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_400_400/0/1684174471975?e=1687986000&v=beta&t=NQsDrOyg55fgO3x1uPcuVwE-jjXbwpVUvGzlRcUuShA",
-        online: true
+        online: false
     },
     {
         name: "Terence Hill",
