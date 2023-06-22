@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const friends = [
     {
@@ -32,32 +33,32 @@ const friends = [
         online: true
     },
     {
-        name: "Alfio Puglisi",
+        name: "Antonio Vecchio",
         imgprofile: "https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/279222191_1904293366431839_7754633369684283708_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=hhhkt3oCMXAAX8G13ML&_nc_ht=scontent-fco2-1.xx&oh=00_AfBxQEoXmAbdd8fI1_473LzK7k145xiVlkIBSl2F7z6Q0g&oe=64989F7B",
         online: true
     },
     {
-        name: "Roberto Fanara",
-        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_800_800/0/1684752485758?e=1687986000&v=beta&t=MMMLsg_CqMO6T5YX7DAWpp71wYPuDNhFnwXaMWZAar8",
+        name: "Giovanna Catalano",
+        imgprofile: "https://cdn.pixabay.com/photo/2018/02/21/08/40/woman-3169726_1280.jpg",
         online: true
     },
     {
-        name: "Paolo Gallitelli",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687986000&v=beta&t=08H0ZDUJ2V9_tYZrEZSv1hSxbZnRizkVGBsHiOtQ0PU",
+        name: "Giuseppe Verdi",
+        imgprofile: "https://cdn.pixabay.com/photo/2015/11/26/00/14/woman-1063100_1280.jpg",
         online: true
     },
     {
-        name: "Gabriel Marchegiani",
+        name: "Ciccio Pasticcio",
         imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_400_400/0/1684174471975?e=1687986000&v=beta&t=NQsDrOyg55fgO3x1uPcuVwE-jjXbwpVUvGzlRcUuShA",
         online: true
     },
     {
-        name: "Danilo Carbone",
+        name: "Terence Hill",
         imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_400_400/0/1685623380714?e=1687986000&v=beta&t=j1TYZwmX_iTAcCA86d2RMbwnyAVNFEYZjryCeFGv7mQ",
         online: true
     },
     {
-        name: "Giuseppe Bianconi",
+        name: "Bud Spencer",
         imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_400_400/0/1684178170263?e=1687986000&v=beta&t=dEjQ14DxrYoMMWGOzUo4DBOzI_9WwzSfLH1w-nKFV48",
         online: true
     }
@@ -96,9 +97,11 @@ function Sidebar(){
                                 }
                             }).map((item, key) => {
                                 return (<>
-                                        <div className="flex flex-column-reverse h-20 items-center gap-5 text-slate-200 hover:bg-[#2a2a2a] cursor-pointer rounded-md" key={key}>
-                                        <img src={item.imgprofile} className="rounded-full h-16 w-16 bg-cover"/>
-                                        <h3 className="font-bold text-sm">{item.name}</h3>
+                                        <div className="flex flex-column-reverse h-20 items-center gap-5 text-slate-200 hover:bg-[#2a2a2a] cursor-pointer rounded-md" key={key} onClick={setEditingHandler}>
+                                        <img src={item.imgprofile} className="rounded-full h-16 w-16 bg-cover bg-center"/>
+                                        <Link to="/profile">
+                                            <h3 className="font-bold text-sm">{item.name}</h3>
+                                        </Link>
                                         {item.online && <div className="ml-auto mr-5 rounded-full bg-green-500 h-3 w-3"></div>}
                                         </div>
                                     </>)
