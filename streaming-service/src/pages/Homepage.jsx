@@ -16,7 +16,7 @@ function Homepage() {
   return (
     <>
       <div className="bg-black w-full h-full mt-10 mb-10">
-      { detailsEditing && <FilmDetails closeDetails={setDetailsEditingHandler}/> }
+      { detailsEditing && <FilmDetails closeDetails={setDetailsEditingHandler} img={'https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg'} title='Una Notte da Leoni'/> }
         <div className="flex flex-col items-center">
           <div className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative cursor-pointer" onClick={setDetailsEditingHandler}>
             <img className="w-full h-full z-0" src="https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg"></img>
@@ -42,7 +42,7 @@ function Homepage() {
               <p className="text-white text-[25px]">Trending</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover bg-center">
-                  
+
                   <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px]">Don't look up</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://static.sky.it/images_static/tg24/spettacolo/2019/08/14/James_Cameron/James_Cameron_Avatar.jpg.transform/hero-tablet/ffd5e21ae3ab3803fee4805ee5532d1bc3304f7a/img.jpeg')] bg-cover bg-center">
