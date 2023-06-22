@@ -15,7 +15,7 @@ const Profile = () => {
     email: "johndoe@example.com",
     subscriptionPlan: "Premium",
     profilePicture: "profile-picture.jpg",
-    isOnline: false,
+    isOnline: true,
     currentMovie: "Spider-man into the spiderverse",
   });
 
