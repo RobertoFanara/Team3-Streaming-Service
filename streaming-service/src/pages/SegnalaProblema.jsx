@@ -12,8 +12,8 @@ const SegnalaProblema = () => {
   };
 
   return (
-    <div className="bg-black text-white py-8">
-      <div className="container mx-auto px-4">
+    <section className="bg-black text-black py-20">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-4 sm:mx-8 md:mx-12 lg:mx-28 pt-14 pb-14">
         <h2 className="text-xl font-bold mb-4">Segnala un problema</h2>
         {segnalazioneInviata ? ( <p className="mb-4 text-green-500">Segnalazione inviata!</p>) : null}
         <form onSubmit={handleSubmit}>
@@ -34,13 +34,13 @@ const SegnalaProblema = () => {
           </div>
           <button
             type="submit"
-            className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-lg"
+            className="bg-white hover:bg-yellow-600 text-black px-6 py-2 rounded-lg"
           >
             Invia segnalazione
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

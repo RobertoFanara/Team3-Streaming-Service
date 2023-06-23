@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const GuidaESupporto = () => {
   return (
-    <section className="bg-black text-black py-20">
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="col-span-2 lg:col-span-1">
+<section className="bg-black text-black py-20">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-4 sm:mx-8 md:mx-12 lg:mx-28 pt-14 pb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-6">
+        <div className="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-1">
             <h2 className="text-xl font-bold mb-4">Guida e supporto</h2>
             <ul className="space-y-2">
               <li>

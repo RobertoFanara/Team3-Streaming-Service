@@ -11,7 +11,7 @@ function Footer() {
           <div className="footer_logo">
             {/* <img src="/logo.png" alt="Logo del servizio streaming" /> */}
           </div>
-          <div className="w-48">
+          <div className="w-full sm:w-48 md:w-auto mt-4 sm:mt-0">
             <h3 className="mb-4">Informazioni</h3>
             <ul className="list-none p-0 m-0">
               <li>
@@ -28,41 +28,38 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className="w-48">
+          <div className="w-full sm:w-48 md:w-auto mt-4 sm:mt-0">
             <h3 className="mb-4">Servizi</h3>
             <ul className="list-none p-0 m-0">
               <li>
-              <Link to="/catalogo" className="text-gray-800 hover:text-gray-200">Catalogo</Link>
+                <Link to="/catalogo" className="text-gray-800 hover:text-gray-200">Catalogo</Link>
               </li>
               <li>
-              <Link to="/piani-abbonamento" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
+                <Link to="/piani-abbonamento" className="text-gray-800 hover:text-gray-200">Piani di abbonamento</Link>
               </li>
               <li>
-              <Link to="/dispositivi" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</Link>
+                <Link to="/dispositivi" className="text-gray-800 hover:text-gray-200">Dispositivi supportati</Link>
               </li>
               <li>
-              <Link to="/guida" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
+                <Link to="/guida" className="text-gray-800 hover:text-gray-200">Guida e supporto</Link>
               </li>
             </ul>
           </div>
-          <div className="mt-4">
-            <ul className="list-none p-0 m-0 flex-column">
+          <div className="mt-4 sm:mt-0">
+            <ul className="list-none p-0 m-0 flex flex-wrap">
               <li className="mr-4">
                 <a href="https://www.facebook.com/" className="text-gray-800 hover:text-gray-200">
                   <img src={facebook} alt="Facebook" />
-                  <i className="facebook"></i>
                 </a>
               </li>
               <li className="mr-4">
                 <a href="https://www.twitter.com/" className="text-gray-800 hover:text-gray-200">
                   <img src={twitter} alt="Twitter" />
-                  <i className="twitter"></i>
                 </a>
               </li>
               <li className="mr-4">
                 <a href="https://www.instagram.com/" className="text-gray-800 hover:text-gray-200">
                   <img src={instagram} alt="Instagram" />
-                  <i className="instagram"></i>
                 </a>
               </li>
             </ul>
