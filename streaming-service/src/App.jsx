@@ -33,7 +33,8 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Homepage/>} />
+      <Route path="/" element={<Login/>}/>
+      <Route path="/homepage" element={<Homepage/>} />
       <Route path="categories" element={<Categories />} />
       <Route path="profile" element={<Profile />} />
       <Route path="others" element={<Others />} />
@@ -53,7 +54,6 @@ function App() {
       <Route path="/guida" element={<GuidaSupporto />} />
       <Route path="/centro-assistenza" element={<CentroAssistenza />} />
       <Route path="/segnala-problema" element={<SegnalaProblema />} />
-      <Route path="/logout" element={<Login/>}/>
       </Routes>
     <Footer />
     </BrowserRouter>

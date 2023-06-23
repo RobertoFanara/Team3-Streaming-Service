@@ -112,7 +112,7 @@ const handleCategoriesDisappear = () => {
       <div className="flex items-center justify-center bg-transparent">
         <div className="fixed top-0 z-30">
         <div className="flex item-center justify-center absolute top-0 bg-[rgb(28,28,28)] w-fit rounded-br-[10px] rounded-bl-[10px] space-x-12 -translate-x-1/2 pl-[30px] pr-[30px] h-[60px]">
-          <Link to="/" onClick={topFunction}>
+          <Link to="/homepage" onClick={topFunction}>
             <div className="home w-[70px] h-[100%] mt-[5px] hover:invert-[94%] hover:sepia-[94%] hover:saturate-[0%] hover:hue-rotate-[226deg] hover:brightness-[105%] hover:contrast-[105%]" onClick={handleCategoriesDisappear()}>
               <img
                 src="/src/assets/images/home.svg"
@@ -206,7 +206,7 @@ const handleCategoriesDisappear = () => {
                   <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Abbonamento</div>
                 </Link>
                 <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Impostazioni</div>
-                <Link to="/logout">
+                <Link to="/">
                   <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Logout</div>
                 </Link>
                 </div>}
