@@ -11,8 +11,8 @@ function Footer() {
     <footer className="bg-[#ffbb38] p-6">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
-          <div className="footer_logo">
-            {/* <img src="/logo.png" alt="Logo del servizio streaming" /> */}
+          <div className="flex justify-center items-center ml-10 footer_logo w-[150px] h-[150px]">
+            <img src="./src/assets/images/logoSS.png" alt="Logo del servizio streaming" />
           </div>
           <div className="w-full sm:w-48 md:w-auto mt-4 sm:mt-0">
             <h3 className="mb-4">Informazioni</h3>
