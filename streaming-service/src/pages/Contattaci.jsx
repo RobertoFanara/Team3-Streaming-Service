@@ -18,7 +18,7 @@ const Contattaci = () => {
               <h3 className="text-lg leading-6 font-medium text-gray-900">Assistenza clienti</h3>
               <div className="mt-2">
                 <p className="text-sm leading-5 text-gray-500">Hai bisogno di assistenza? Contattaci tramite il seguente indirizzo email:</p>
-                <p className="mt-3 text-sm leading-5 font-medium text-indigo-600 truncate">supporto@nome-sito.com</p>
+                <p className="mt-3 text-sm leading-5 font-medium text-indigo-600 truncate">supporto@service-streaming-team-3.com</p>
               </div>
             </div>
           </div>
@@ -28,7 +28,7 @@ const Contattaci = () => {
               <h3 className="text-lg leading-6 font-medium text-gray-900">Richieste di partnership</h3>
               <div className="mt-2">
                 <p className="text-sm leading-5 text-gray-500">Se sei interessato a una partnership, contattaci al seguente indirizzo email:</p>
-                <p className="mt-3 text-sm leading-5 font-medium text-indigo-600 truncate">partnership@nome-sito.com</p>
+                <p className="mt-3 text-sm leading-5 font-medium text-indigo-600 truncate">partnership@service-streaming-team-3.com</p>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@ const Contattaci = () => {
               <h3 className="text-lg leading-6 font-medium text-gray-900">Assistenza tecnica</h3>
               <div className="mt-2">
                 <p className="text-sm leading-5 text-gray-500">Per domande tecniche, invia un'email a:</p>
-                <p className="mt-3 text-sm leading-5 font-medium text-indigo-600 truncate">techsupport@nome-sito.com</p>
+                <p className="mt-3 text-sm leading-5 font-medium text-indigo-600 truncate">techsupport@service-streaming-team-3.com</p>
               </div>
             </div>
           </div>
