@@ -24,6 +24,7 @@ import Avventura from "./components/Category/Avventura/Avventura"
 import Comico from "./components/Category/Comico/Comico"
 import Drammatico from "./components/Category/Drammatico/Drammatico"
 import Azione from "./components/Category/Azione/Azione"
+import Login from "./pages/Login"
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
   return(
     <>
     <BrowserRouter>
+    {/* <Login/> */}
       <Sidebar/>
       <Navbar/>
       <Routes>

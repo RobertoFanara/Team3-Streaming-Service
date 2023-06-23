@@ -16,7 +16,7 @@ function Homepage() {
   return (
     <>
       <div className="bg-black w-full h-full mt-10 mb-10">
-      { detailsEditing && <FilmDetails closeDetails={setDetailsEditingHandler} img={'https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg'} title='Una Notte da Leoni'/> }
+      { detailsEditing && <FilmDetails closeDetails={setDetailsEditingHandler} img="bg-[url('https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg')]" title='Una Notte da Leoni'/> }
         <div className="flex flex-col items-center">
           <div className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative cursor-pointer" onClick={setDetailsEditingHandler}>
             <img className="w-full h-full z-0" src="https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg"></img>

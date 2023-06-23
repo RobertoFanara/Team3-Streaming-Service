@@ -11,7 +11,7 @@ function FilmDetails(props){
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </div>
-                    <div className={`bg-black z-30 h-full w-3/5 rounded-l-md bg-[url('${props.img}')] bg-cover`}></div>
+                    <div className={`bg-black z-30 h-full w-3/5 rounded-l-md ${props.img} bg-cover`}></div>
                     <div className='p-5 flex flex-col w-2/5 justify-between bg-black rounded-tr-md rounded-br-md'>
                         <div>
                             <h3 className="text-[#ffbb38] font-semibold text-lg">{props.title}</h3>
