@@ -32,8 +32,6 @@ function App() {
   return(
     <>
     <BrowserRouter>
-      <Sidebar/>
-      <Navbar/>
       <Routes>
       <Route path="/" element={<Homepage/>} />
       <Route path="categories" element={<Categories />} />

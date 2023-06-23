@@ -1,9 +1,13 @@
 import React from "react";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 const PianoAbbonamento = () => {
-  return (
+  return (<>
+    <Sidebar/>
+    <Navbar/>
     <section className="bg-black text-black py-20">
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-28 pt-5 pb-7">
         <h2 className="text-3xl font-bold mb-4">Piani di abbonamento</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-white p-6 rounded-lg">
@@ -37,6 +41,7 @@ const PianoAbbonamento = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

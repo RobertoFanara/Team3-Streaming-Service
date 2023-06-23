@@ -1,4 +1,6 @@
 import React from "react";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 const Catalogo = () => {
   const filmList = [
@@ -104,9 +106,11 @@ const Catalogo = () => {
     },
   ];
 
-  return (
+  return (<>
+    <Sidebar/>
+    <Navbar/>
     <section className="bg-black text-black py-20">
-    <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
+    <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-28 pt-5 pb-7">
         <h3 className="text-4xl font-bold mb-4 lg:text-center">
           Catalogo di film più visti dai nostri abbonati!
         </h3>
@@ -142,6 +146,7 @@ const Catalogo = () => {
         </ul>
       </div>
     </section>
+    </>
   );
 };
 

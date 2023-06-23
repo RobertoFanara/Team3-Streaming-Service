@@ -1,9 +1,13 @@
 import React from "react";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 const SupportedDevices = () => {
-  return (
+  return (<>
+    <Sidebar/>
+    <Navbar/>
     <section className="bg-black text-black py-20">
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-28 pt-5 pb-7">
         <h2 className="text-3xl font-semibold text-black mb-4">
           Dispositivi supportati
         </h2>
@@ -44,9 +48,9 @@ const SupportedDevices = () => {
             <span className="ml-2 text-gray-800">Mobile</span>
           </div>
           <div className="flex items-center justify-center bg-white rounded-lg p-4">
-            <img 
-            src="../src/assets/images/tv.svg" 
-            alt="TV" 
+            <img
+            src="../src/assets/images/tv.svg"
+            alt="TV"
             className="h-12 w-12" />
             <span className="ml-2 text-gray-800">TV</span>
           </div>
@@ -77,6 +81,7 @@ const SupportedDevices = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

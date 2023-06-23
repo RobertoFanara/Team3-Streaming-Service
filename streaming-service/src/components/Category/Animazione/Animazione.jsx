@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import Sidebar from "../../Sidebar";
+import Navbar from "../../Navbar";
 
 const Animazione = () => {
     const topFunction = () => {
@@ -7,6 +9,8 @@ const Animazione = () => {
 
     return(
         <>
+        <Sidebar/>
+        <Navbar/>
             <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)] pt-[50px] pb-[30px]">
                 <div className="flex border border-black w-[870px] gap-5 flex-wrap">
 
@@ -27,7 +31,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
@@ -47,11 +51,11 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
-                    
+
                         <a href="" className="w-[23.25%]  hover:text-white transition duration-300 ease-in-out">
                     <div className="w-[100%] border border-[RGB(255,187,56)] h-[250px] rounded-lg relative bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover bg-center flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
@@ -67,7 +71,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
@@ -87,7 +91,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
@@ -107,7 +111,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
@@ -127,11 +131,11 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                            
+
                         </div>
                     </div>
                         </a>
-                    
+
                         <a href="" className="w-[23.25%]  hover:text-white transition duration-300 ease-in-out">
                     <div className="border border-[RGB(255,187,56)] w-[100%] h-[250px] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2017/10/059/coverlg_home.jpg')] bg-cover bg-right flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
@@ -147,7 +151,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                            
+
                         </div>
                     </div>
                         </a>
@@ -167,7 +171,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                            
+
                         </div>
                     </div>
                         </a>
@@ -187,7 +191,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
@@ -207,11 +211,11 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
-                    
+
                         <a href="" className="w-[23.25%]  hover:text-white transition duration-300 ease-in-out">
                     <div className="border border-[RGB(255,187,56)] w-[100%] h-[250px] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2017/10/025/locandina.jpg')] bg-cover bg-center flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
@@ -227,7 +231,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
@@ -247,7 +251,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                     
+
                         </div>
                     </div>
                         </a>
@@ -267,7 +271,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                           
+
                         </div>
                     </div>
                         </a>
@@ -287,11 +291,11 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                            
+
                         </div>
                     </div>
                         </a>
-                    
+
                         <a href="" className="w-[23.25%]  hover:text-white transition duration-300 ease-in-out">
                     <div className="border border-[RGB(255,187,56)] w-[100%] h-[250px] rounded-lg relative bg-[url('https://api.superguidatv.it/v1/movies/10785/cover?width=240')] bg-cover bg-center flex align-center justify-center">
                         <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
@@ -307,7 +311,7 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                            
+
                         </div>
                     </div>
                         </a>
@@ -327,13 +331,13 @@ const Animazione = () => {
                         </div>
                         <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                            
+
                         </div>
                     </div>
                         </a>
 
                 </div>
-                     
+
                      <div className="w-[100%] flex items-center justify-center text-2xl space-x-2">
                         <div>1</div>
                         <Link to={"/OthersSecondPage"} onClick={topFunction} >
@@ -345,6 +349,6 @@ const Animazione = () => {
             </div>
         </>
     )
-} 
+}
 
 export default Animazione

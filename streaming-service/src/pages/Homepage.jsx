@@ -1,5 +1,7 @@
 import FilmDetails from "../components/FilmDetails";
 import { useState } from "react";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 function Homepage() {
 
@@ -15,6 +17,8 @@ function Homepage() {
 
   return (
     <>
+    <Sidebar/>
+    <Navbar/>
       <div className="bg-black w-full h-full mt-10 mb-10">
       { detailsEditing && <FilmDetails closeDetails={setDetailsEditingHandler} img="bg-[url('https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg')]" title='Una Notte da Leoni'/> }
         <div className="flex flex-col items-center">

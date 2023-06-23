@@ -6,6 +6,8 @@ import UserStatus from "../components/UserStatus";
 import Recommendations from "../components/Recommendation";
 import LastViewed from "../components/LastViewed";
 import Followers from "../components/Followers";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 const Profile = () => {
   const [play] = useSound(boopSfx);
@@ -80,6 +82,8 @@ const Profile = () => {
 
   return (
     <>
+      <Sidebar/>
+      <Navbar/>
       <div className="profile-container">
     <Recommendations recommendations={recommendations} />
         <div className="profile-header">

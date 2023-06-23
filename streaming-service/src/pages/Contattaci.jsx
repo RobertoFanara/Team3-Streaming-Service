@@ -1,9 +1,13 @@
 import React from 'react';
+import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Navbar';
 
 const Contattaci = () => {
-  return (
+  return (<>
+    <Sidebar/>
+    <Navbar/>
     <section className="bg-black text-black py-20">
-    <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
+    <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-28 pt-5 pb-7">
         <div className="lg:text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contattaci</h2>
           <p className="mt-2 leading-6 text-black">Hai domande o suggerimenti? Contattaci utilizzando il modulo sottostante.</p>
@@ -43,6 +47,7 @@ const Contattaci = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

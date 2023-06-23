@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Navbar';
 
 const CentroAssistenza = () => {
-  return (
+  return (<>
+    <Sidebar/>
+    <Navbar/>
     <section className="bg-black text-black py-20">
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-yellow-300 rounded-lg mx-28 pt-5 pb-7">
+        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-28 pt-5 pb-7">
         <h2 className="text-2xl font-bold mb-6">Centro assistenza</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div>
@@ -29,6 +33,7 @@ const CentroAssistenza = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

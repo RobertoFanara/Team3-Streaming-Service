@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Navbar';
 
 const SegnalaProblema = () => {
   const [problema, setProblema] = useState('');
@@ -11,7 +13,9 @@ const SegnalaProblema = () => {
     setSegnalazioneInviata(true);
   };
 
-  return (
+  return (<>
+    <Sidebar/>
+    <Navbar/>
     <div className="bg-black text-white py-8">
       <div className="container mx-auto px-4">
         <h2 className="text-xl font-bold mb-4">Segnala un problema</h2>
@@ -41,6 +45,7 @@ const SegnalaProblema = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
