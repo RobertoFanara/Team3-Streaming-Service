@@ -47,22 +47,22 @@ function Homepage() {
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover bg-center">
 
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Don't look up</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Don't look up</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://static.sky.it/images_static/tg24/spettacolo/2019/08/14/James_Cameron/James_Cameron_Avatar.jpg.transform/hero-tablet/ffd5e21ae3ab3803fee4805ee5532d1bc3304f7a/img.jpeg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">James Cameron: Avatar</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">James Cameron: Avatar</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Pirati dei caraibi: La maledizione della prima luna</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Pirati dei caraibi</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Jumanji: The next level</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Jumanji: The next level</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSlT9wIvFh5V9NIk024kJ4F_STBlsCCi1ilMQ0_Tu12D9M09pQ')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Avengers: End Game</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Avengers: End Game</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.focus.it/site_stored/imgs/0004/011/spider-man-2002.1020x680.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Spider-man</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Spider-man</p>
                 </div>
               </div>
             </div>
@@ -70,22 +70,22 @@ function Homepage() {
               <p className="text-white text-[25px]">Ultime Uscite</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Don't look up</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Don't look up</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://static.sky.it/images_static/tg24/spettacolo/2019/08/14/James_Cameron/James_Cameron_Avatar.jpg.transform/hero-tablet/ffd5e21ae3ab3803fee4805ee5532d1bc3304f7a/img.jpeg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">James Cameron: Avatar</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">James Cameron: Avatar</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Pirati dei caraibi</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Pirati dei caraibi</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Jumanji: The next level</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Jumanji: The next level</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSlT9wIvFh5V9NIk024kJ4F_STBlsCCi1ilMQ0_Tu12D9M09pQ')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Avengers: End Game</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Avengers: End Game</p>
                 </div>
                 <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.focus.it/site_stored/imgs/0004/011/spider-man-2002.1020x680.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-5 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Spider-man</p>
+                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">Spider-man</p>
                 </div>
               </div>
             </div>
