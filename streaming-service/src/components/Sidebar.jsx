@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import profileImg from '../assets/images/miles-profile.webp'
 
 const friends = [
     {
@@ -18,8 +19,8 @@ const friends = [
         online: false
     },
     {
-        name: "Gabriel Marchegiani",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_400_400/0/1684174471975?e=1687986000&v=beta&t=NQsDrOyg55fgO3x1uPcuVwE-jjXbwpVUvGzlRcUuShA",
+        name: "Gabrimarche_",
+        imgprofile: profileImg,
         online: true
     },
     {
@@ -99,7 +100,7 @@ function Sidebar(){
                                 return (<>
                                         <div className="flex flex-column-reverse h-20 items-center gap-5 text-slate-200 hover:bg-[#2a2a2a] cursor-pointer rounded-md" key={key} onClick={setEditingHandler}>
                                         <img src={item.imgprofile} className="rounded-full h-16 w-16 bg-cover bg-center"/>
-                                        <Link to={`${item.name === 'Gabriel Marchegiani' ? "/profile" : ''}`}>
+                                        <Link to={`${item.name === 'Gabrimarche_' ? "/profile" : ''}`}>
                                             <h3 className="font-bold text-sm">{item.name}</h3>
                                         </Link>
                                         {item.online && <div className="ml-auto mr-5 rounded-full bg-green-500 h-3 w-3"></div>}
