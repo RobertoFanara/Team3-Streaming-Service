@@ -20,7 +20,7 @@ const Login = () => {
           <input className="rounded-3xl border-none bg-[#ffbb38] bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="name" placeholder="*********" />
         </div>
         <div className="mt-8 flex justify-center text-lg text-black">
-        <Link to="/">
+        <Link to="/homepage">
           <button type="button" className="rounded-3xl bg-[#ffbb38] bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
         </Link>
         </div>

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import facebook from "../assets/images/facebook.svg"
 import instagram from "../assets/images/instagram.svg"
 import twitter from "../assets/images/twitter.svg"
+import Sidebar from './Sidebar';
+import Navbar from './Navbar';
 
 function Footer() {
   return (
