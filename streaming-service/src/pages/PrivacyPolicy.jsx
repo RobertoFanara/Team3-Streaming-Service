@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
   return (<>
     <Sidebar/>
     <Navbar/>
-    <section className="bg-black text-black py-20">
+    <section className="flex justify-center items-center bg-black text-black py-20">
     <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-4 sm:mx-8 md:mx-12 lg:mx-28 pt-5 pb-7">
       <div className="text-center lg:text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Privacy e Policy</h2>
