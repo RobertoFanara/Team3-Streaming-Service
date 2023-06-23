@@ -15,6 +15,8 @@ const SegnalaProblema = () => {
 
   return (
     <section className="bg-black text-black py-20">
+      <Navbar/>
+      <Sidebar/>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-4 sm:mx-8 md:mx-12 lg:mx-28 pt-14 pb-14">
         <h2 className="text-xl font-bold mb-4">Segnala un problema</h2>
         {segnalazioneInviata ? ( <p className="mb-4 text-green-500">Segnalazione inviata!</p>) : null}
