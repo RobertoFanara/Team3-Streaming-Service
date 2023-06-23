@@ -32,7 +32,6 @@ function App() {
   return(
     <>
     <BrowserRouter>
-    {/* <Login/> */}
       <Sidebar/>
       <Navbar/>
       <Routes>
@@ -56,6 +55,7 @@ function App() {
       <Route path="/guida" element={<GuidaSupporto />} />
       <Route path="/centro-assistenza" element={<CentroAssistenza />} />
       <Route path="/segnala-problema" element={<SegnalaProblema />} />
+      <Route path="/logout" element={<Login/>}/>
       </Routes>
     <Footer />
     </BrowserRouter>

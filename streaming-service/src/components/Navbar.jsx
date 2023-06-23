@@ -206,7 +206,9 @@ const handleCategoriesDisappear = () => {
                   <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Abbonamento</div>
                 </Link>
                 <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Impostazioni</div>
-                <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Logout</div>
+                <Link to="/logout">
+                  <div className="p-2 text-center hover:bg-zinc-800 cursor-pointer rounded-md" onClick={topFunction}>Logout</div>
+                </Link>
                 </div>}
             </div>
           </div>
