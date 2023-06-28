@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FilmDetails from "../components/FilmDetails";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 
 function Homepage() {
+  const [filmsListUU, setFilmsListUU] = useState([])
+  const [filmsListP, setFilmsListP] = useState([])
   const [detailsEditing, setDetailsEditing] = useState(false);
 
   const setDetailsEditingHandler = () => {
@@ -14,7 +16,9 @@ function Homepage() {
     }
   };
 
-  const url = "https://api.themoviedb.org/3/trending/all/day?language=it-IT";
+  const urlUU = 'https://api.themoviedb.org/3/movie/now_playing?language=it-IT&page=1&region=IT';
+
+  const urlP = 'https://api.themoviedb.org/3/movie/popular?language=it-IT&page=1&region=IT';
 
   const options = {
     method: "GET",
@@ -25,24 +29,35 @@ function Homepage() {
     },
   };
 
-  const state = {
-    todos:[]
-  }
-
-  const fetchData = async () => {
+  const fetchDataP = async () => {
     try {
-      const response = await fetch(url, options);
+      const response = await fetch(urlP, options);
       const result = await response.json();
-      state.todos = result;
-      for (let i = 0; i < 6; i++) {
-      console.log(result.results[i].title);
-      }
-    } catch (error) {
-      console.log(error)
+      console.log(result.results)
+      setFilmsListP(result.results.filter((item, index) => index < 6).map((arr) => arr))
     }
-  }
+     catch (error) {
+      console.log(error);
+    }
+  };
 
-  fetchData()
+  const fetchDataUU = async () => {
+    try {
+      const response = await fetch(urlUU, options);
+      const result = await response.json();
+      console.log(result.results)
+      setFilmsListUU(result.results.filter((item, index) => index < 6).map((arr) => arr))
+    }
+     catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchDataP()
+    fetchDataUU()
+  },[])
+
 
   return (
     <>
@@ -67,7 +82,7 @@ function Homepage() {
             ></img>
             <div className="flex z-10 absolute w-full h-full">
               <p className="absolute text-[#ffbb38] text-[40px] bottom-[110px] left-[30px] bg-black/75 p-2 rounded-md">
-                Una notte da leoni
+                
               </p>
               <div>
                 <svg
@@ -176,71 +191,25 @@ function Homepage() {
             <div className="flex flex-col justify-start w-[950px]">
               <p className="text-white text-[25px]">Trending</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Don't look up
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://static.sky.it/images_static/tg24/spettacolo/2019/08/14/James_Cameron/James_Cameron_Avatar.jpg.transform/hero-tablet/ffd5e21ae3ab3803fee4805ee5532d1bc3304f7a/img.jpeg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    James Cameron: Avatar
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Pirati dei caraibi
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Jumanji: The next level
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSlT9wIvFh5V9NIk024kJ4F_STBlsCCi1ilMQ0_Tu12D9M09pQ')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Avengers: End Game
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.focus.it/site_stored/imgs/0004/011/spider-man-2002.1020x680.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Spider-man
-                  </p>
-                </div>
+                {filmsListP.map((film) => {
+                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px]`}>
+                            <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
+                              {film.title}
+                            </p>
+                         </div>)
+                })}
               </div>
             </div>
             <div className="flex flex-col justify-start w-[950px]">
               <p className="text-white text-[25px]">Ultime Uscite</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Don't look up
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://static.sky.it/images_static/tg24/spettacolo/2019/08/14/James_Cameron/James_Cameron_Avatar.jpg.transform/hero-tablet/ffd5e21ae3ab3803fee4805ee5532d1bc3304f7a/img.jpeg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    James Cameron: Avatar
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Pirati dei caraibi
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Jumanji: The next level
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSlT9wIvFh5V9NIk024kJ4F_STBlsCCi1ilMQ0_Tu12D9M09pQ')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Avengers: End Game
-                  </p>
-                </div>
-                <div className="relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] bg-[url('https://www.focus.it/site_stored/imgs/0004/011/spider-man-2002.1020x680.jpg')] bg-cover bg-center">
-                  <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                    Spider-man
-                  </p>
-                </div>
+              {filmsListUU.map((film) => {
+                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px]`}>
+                            <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
+                              {film.title}
+                            </p>
+                         </div>)
+                })}
               </div>
             </div>
           </div>
