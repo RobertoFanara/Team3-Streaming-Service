@@ -82,7 +82,7 @@ function Homepage() {
             ></img>
             <div className="flex z-10 absolute w-full h-full">
               <p className="absolute text-[#ffbb38] text-[40px] bottom-[110px] left-[30px] bg-black/75 p-2 rounded-md">
-                
+                {filmsListP.filter((item, index) => index < 1).map((film) => film.title + ' work in progress....') }
               </p>
               <div>
                 <svg
