@@ -6,7 +6,7 @@ const Contattaci = () => {
   return (<>
     <Sidebar/>
     <Navbar/>
-    <section className="flex items-center justify-center bg-black text-black py-20">
+    <section className="flex items-center justify-center bg-black text-black py-20" style={{minHeight: 'calc(100vh - 242px)'}}>
       <div className=" max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-4 sm:mx-8 md:mx-12 lg:mx-28 pt-5 pb-7">
         <div className="text-center lg:text-center">
           <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Contattaci</h2>

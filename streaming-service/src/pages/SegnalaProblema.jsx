@@ -14,7 +14,7 @@ const SegnalaProblema = () => {
   };
 
   return (
-    <section className="bg-black text-black py-20">
+    <section className="bg-black text-black py-20" style={{minHeight: 'calc(100vh - 242px)'}}>
       <Navbar/>
       <Sidebar/>
       <div className="max-w-7xl px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-4 sm:mx-8 md:mx-12 lg:mx-28 pt-14 pb-14">
