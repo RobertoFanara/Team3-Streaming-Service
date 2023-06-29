@@ -67,8 +67,9 @@ function Homepage() {
         {detailsEditing && (
           <FilmDetails
             closeDetails={setDetailsEditingHandler}
-            img="bg-[url('https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg')]"
-            title="Una Notte da Leoni"
+            img={filmsListP.filter((item, index) => index === 0).map((film) => film.poster_path)}
+            title={filmsListP.filter((item, index) => index === 0).map((film) => film.title)}
+            trama={filmsListP.filter((item, index) => index === 0).map((film) => film.overview)}
           />
         )}
         <div className="flex flex-col items-center">
@@ -82,7 +83,7 @@ function Homepage() {
             ></img>
             <div className="flex z-10 absolute w-full h-full">
               <p className="absolute text-[#ffbb38] text-[40px] bottom-[110px] left-[30px] bg-black/75 p-2 rounded-md">
-                {filmsListP.filter((item, index) => index < 1).map((film) => film.title + ' work in progress....') }
+                {filmsListP.filter((item, index) => index === 0).map((film) => film.title)}
               </p>
               <div>
                 <svg
@@ -191,8 +192,8 @@ function Homepage() {
             <div className="flex flex-col justify-start w-[950px]">
               <p className="text-white text-[25px]">Trending</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
-                {filmsListP.map((film) => {
-                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px]`}>
+                {filmsListP.map((film, key) => {
+                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px]`} key={key}>
                             <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
                               {film.title}
                             </p>
@@ -203,8 +204,8 @@ function Homepage() {
             <div className="flex flex-col justify-start w-[950px]">
               <p className="text-white text-[25px]">Ultime Uscite</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
-              {filmsListUU.map((film) => {
-                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px]`}>
+              {filmsListUU.map((film, key) => {
+                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px]`} key={key}>
                             <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
                               {film.title}
                             </p>
