@@ -77,10 +77,10 @@ function Homepage() {
             className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative cursor-pointer"
             onClick={setDetailsEditingHandler}
           >
-            <img
+            <div
               className="w-full h-full z-0"
-              src="https://images.tbs.com/tbs/$dyna_params/https%3A%2F%2Fi.cdn.tbs.com%2Fassets%2Fimages%2F2019%2F10%2FHangover-1600x900.jpg"
-            ></img>
+              style={{background: `url('https://image.tmdb.org/t/p/original/${filmsListP.filter((item, index) => index === 0).map((film) => film.poster_path)}')`, backgroundSize: 'cover', backgroundPosition:'center top'}}
+            ></div>
             <div className="flex z-10 absolute w-full h-full">
               <p className="absolute text-[#ffbb38] text-[40px] bottom-[110px] left-[30px] bg-black/75 p-2 rounded-md">
                 {filmsListP.filter((item, index) => index === 0).map((film) => film.title)}
