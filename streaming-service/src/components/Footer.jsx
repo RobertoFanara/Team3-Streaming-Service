@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 
 function Footer() {
   return (
-    
+
     <footer className="bg-[#ffbb38] p-6">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
@@ -70,7 +70,7 @@ function Footer() {
         </div>
         <div className="text-center mt-6 text-gray-700 text-sm">
           <p>
-            &copy; {new Date().getFullYear()} Service Streaming - Team 3.
+            &copy; {new Date().getFullYear()} sTrEAM-3.
             Tutti i diritti riservati.
           </p>
         </div>
