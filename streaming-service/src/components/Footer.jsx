@@ -7,13 +7,8 @@ import Navbar from './Navbar';
 
 function Footer() {
   return (
-<<<<<<< HEAD
-    
-    <footer className="bg-[#ffbb38] p-6 ">
-=======
 
     <footer className="bg-[#ffbb38] p-6">
->>>>>>> 47ea6bbb16acd9a2fe34b6df767a1b5ba879da43
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
           <div className="flex justify-center items-center ml-10 footer_logo w-[150px] h-[150px]">
