@@ -193,7 +193,7 @@ function Homepage() {
               <p className="text-white text-[40px] font-bold mb-5">Trending</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                 {filmsListP.map((film, key) => {
-                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`} key={key}>
+                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`} key={key} onClick={setDetailsEditingHandler}>
                             <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
                               {film.title}
                             </p>
@@ -206,7 +206,7 @@ function Homepage() {
                 <p className="text-white text-[40px] font-bold mb-5">Ultime Uscite</p>
                 <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                 {filmsListUU.map((film, key) => {
-                    return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`} key={key}>
+                    return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`} key={key} >
                               <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
                                 {film.title}
                               </p>
