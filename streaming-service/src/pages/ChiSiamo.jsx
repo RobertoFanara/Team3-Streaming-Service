@@ -39,7 +39,7 @@ function ChiSiamo() {
   return (<>
     <Sidebar/>
     <Navbar/>
-    <section className=" bg-black text-black py-20">
+    <section className=" bg-black text-black py-20" style={{minHeight: 'calc(100vh - 242px)'}}>
     <div className="flex justify-center items-center max-w-screen px-4 sm:px-6 lg:px-8 bg-[#ffbb38] rounded-lg mx-4 sm:mx-8 md:mx-12 lg:mx-28 pt-5 pb-7">
       <div className="text-center lg:text-center">
           <h1 className="text-3xl text-center font-bold mb-4">Chi c'è dietro le quinte?</h1>

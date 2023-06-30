@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+<<<<<<< HEAD
     "axios": "^1.4.0",
     "cors": "^2.8.5",
     "nodemailer": "^6.9.3",
+=======
+    "node-fetch": "^2.6.11",
+>>>>>>> 47ea6bbb16acd9a2fe34b6df767a1b5ba879da43
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.12.1",

@@ -5,19 +5,19 @@ function FilmDetails(props){
     return <>
         <div className="fixed top-0 z-30 h-screen w-full">
             <div className="absolute top-0 z-30 bg-black/75 h-full w-full flex justify-center items-center rounded-md">
-                <div className="h-1/2 w-1/2 border-2 border-yellow-600 flex rounded-lg relative z-10">
+                <div className="h-2/3 w-2/3 border-2 border-yellow-600 flex rounded-lg relative z-10">
                     <div className='text-[#ffbb38] absolute top-0 right-0' onClick={props.closeDetails}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-8 w-8 hover:bg-gray-800 cursor-pointer rounded-md p-1">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
                         </svg>
                     </div>
-                    <div className={`bg-black z-30 h-full w-3/5 rounded-l-md ${props.img} bg-cover`}></div>
+                    <div className={`bg-black z-30 h-full w-3/5 rounded-l-md`} style={{background: `url('https://image.tmdb.org/t/p/original/${props.img}')`, backgroundSize: 'cover'}}></div>
                     <div className='p-5 flex flex-col w-2/5 justify-between bg-black rounded-tr-md rounded-br-md'>
-                        <div>
+                        <div className='overflow-auto'>
                             <h3 className="text-[#ffbb38] font-semibold text-lg">{props.title}</h3>
                             <div className='mt-4'>
                                 <h5 className='text-white'>Trama:</h5>
-                                <p className='text-white text-sm mt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut explicabo minus, vel neque asperiores sint repudiandae suscipit, cum repellendus nesciunt.</p>
+                                <p className='text-white text-[14px] mt-2'>{props.trama}</p>
                             </div>
                         </div>
                         <div className="flex items-center justify-evenly">

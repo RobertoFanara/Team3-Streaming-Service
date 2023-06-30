@@ -8,7 +8,7 @@ const Login = () => {
     <div className="text-white">
       <div className="mb-8 flex flex-col items-center">
         <img src="https://bloggytalky.com/wp-content/uploads/2017/07/create-a-free-logo-design-logo-designs-design-a-free-logo-design-a-free-logo-alltech-just-free-logo-design.png" width="150" alt="" srcset="" />
-        <h1 className="mb-2 text-2xl">Service Streaming Team-3</h1>
+        <h1 className="mb-2 text-2xl">sTrEAM-3</h1>
         <span className="text-gray-300">Enter Login Details</span>
       </div>
       <form action="#">
