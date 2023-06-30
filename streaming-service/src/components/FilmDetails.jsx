@@ -6,7 +6,7 @@ function FilmDetails(props){
         <div className="fixed top-0 z-30 h-screen w-full">
             <div className="absolute top-0 z-30 bg-black/75 h-full w-full flex justify-center items-center rounded-md">
                 <div className="h-2/3 w-2/3 border-2 border-yellow-600 flex rounded-lg relative z-10">
-                    <div className='text-[#ffbb38] absolute top-0 right-0' onClick={props.closeDetails}>
+                    <div className='text-[#ffbb38] absolute top-0 right-0' onClick={() => props.closeDetails()}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-8 w-8 hover:bg-gray-800 cursor-pointer rounded-md p-1">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
                         </svg>

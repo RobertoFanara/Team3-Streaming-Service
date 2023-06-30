@@ -4,22 +4,26 @@ import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 
 function Homepage() {
-  const [filmsListUU, setFilmsListUU] = useState([])
-  const [filmsListP, setFilmsListP] = useState([])
+  const [filmsListUU, setFilmsListUU] = useState([]);
+  const [filmsListP, setFilmsListP] = useState([]);
   const [detailsEditing, setDetailsEditing] = useState(false);
+  const [smallFilmEditing, setSmallFilmEditing] = useState(null);
 
-  const setDetailsEditingHandler = () => {
-    if (detailsEditing === false) {
-      setDetailsEditing(true);
-    } else {
-      setDetailsEditing(false);
-    }
+  const setDetailsEditingHandler = (film) => {
+    setSmallFilmEditing(film);
+    setDetailsEditing(true);
   };
 
+  const closeDetails = () => {
+    setDetailsEditing(false);
+    setSmallFilmEditing(null);
+  };
 
-  const urlUU = 'https://api.themoviedb.org/3/movie/now_playing?language=it-IT&page=1&region=IT';
+  const urlUU =
+    "https://api.themoviedb.org/3/movie/now_playing?language=it-IT&page=1&region=IT";
 
-  const urlP = 'https://api.themoviedb.org/3/movie/popular?language=it-IT&page=1&region=IT';
+  const urlP =
+    "https://api.themoviedb.org/3/movie/popular?language=it-IT&page=1&region=IT";
 
   const options = {
     method: "GET",
@@ -34,10 +38,11 @@ function Homepage() {
     try {
       const response = await fetch(urlP, options);
       const result = await response.json();
-      console.log(result.results)
-      setFilmsListP(result.results.filter((item, index) => index < 6).map((arr) => arr))
-    }
-     catch (error) {
+      console.log(result.results);
+      setFilmsListP(
+        result.results.filter((item, index) => index < 6).map((arr) => arr)
+      );
+    } catch (error) {
       console.log(error);
     }
   };
@@ -46,10 +51,11 @@ function Homepage() {
     try {
       const response = await fetch(urlUU, options);
       const result = await response.json();
-      console.log(result.results)
-      setFilmsListUU(result.results.filter((item, index) => index < 6).map((arr) => arr))
-    }
-     catch (error) {
+      console.log(result.results);
+      setFilmsListUU(
+        result.results.filter((item, index) => index < 6).map((arr) => arr)
+      );
+    } catch (error) {
       console.log(error);
     }
   };
@@ -57,19 +63,19 @@ function Homepage() {
   useEffect(() => {
     fetchDataP();
     fetchDataUU();
-  },[]);
+  }, []);
 
   return (
     <>
       <Sidebar />
       <Navbar />
       <div className="bg-black w-full h-full mt-20 mb-10">
-        {detailsEditing && (
+        {smallFilmEditing && (
           <FilmDetails
-            closeDetails={setDetailsEditingHandler}
-            img={filmsListP.filter((item, index) => index === 0).map((film) => film.poster_path)}
-            title={filmsListP.filter((item, index) => index === 0).map((film) => film.title)}
-            trama={filmsListP.filter((item, index) => index === 0).map((film) => film.overview)}
+            closeDetails={closeDetails}
+            img={smallFilmEditing.poster_path}
+            title={smallFilmEditing.title}
+            trama={smallFilmEditing.overview}
           />
         )}
         <div className="flex flex-col items-center">
@@ -79,11 +85,19 @@ function Homepage() {
           >
             <div
               className="w-full h-full z-0"
-              style={{background: `url('https://image.tmdb.org/t/p/original/${filmsListP.filter((item, index) => index === 0).map((film) => film.poster_path)}')`, backgroundSize: 'cover', backgroundPosition:'center top'}}
+              style={{
+                background: `url('https://image.tmdb.org/t/p/original/${filmsListP
+                  .filter((item, index) => index === 0)
+                  .map((film) => film.poster_path)}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center top",
+              }}
             ></div>
             <div className="flex z-10 absolute w-full h-full">
               <p className="absolute text-[#ffbb38] text-[40px] bottom-[110px] left-[30px] bg-black/75 p-2 rounded-md">
-                {filmsListP.filter((item, index) => index === 0).map((film) => film.title)}
+                {filmsListP
+                  .filter((item, index) => index === 0)
+                  .map((film) => film.title)}
               </p>
               <div>
                 <svg
@@ -193,24 +207,46 @@ function Homepage() {
               <p className="text-white text-[40px] font-bold mb-5">Trending</p>
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                 {filmsListP.map((film, key) => {
-                  return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`} key={key} onClick={setDetailsEditingHandler}>
-                            <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                              {film.title}
-                            </p>
-                         </div>)
+                  return (
+                    <div
+                      style={{
+                        background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
+                        backgroundSize: "cover",
+                      }}
+                      className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`}
+                      key={key}
+                      onClick={() => setDetailsEditingHandler(film)}
+                    >
+                      <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
+                        {film.title}
+                      </p>
+                    </div>
+                  );
                 })}
               </div>
             </div>
             <div className="m-10 border-t border-[#ffbb38] pt-10">
               <div className="flex flex-col justify-start w-[950px] ">
-                <p className="text-white text-[40px] font-bold mb-5">Ultime Uscite</p>
+                <p className="text-white text-[40px] font-bold mb-5">
+                  Ultime Uscite
+                </p>
                 <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
-                {filmsListUU.map((film, key) => {
-                    return (<div style={{background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`, backgroundSize: 'cover'}} className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`} key={key} >
-                              <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                                {film.title}
-                              </p>
-                          </div>)
+                  {filmsListUU.map((film, key) => {
+                    return (
+                      <div
+                        style={{
+                          background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
+                          backgroundSize: "cover",
+                        }}
+                        className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`}
+                        key={key}
+                        onClick={() => setDetailsEditingHandler(film)}
+                      >
+                        <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
+                          {film.title}
+                        </p>
+                      </div>
+                    );
                   })}
                 </div>
               </div>
