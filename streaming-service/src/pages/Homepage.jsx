@@ -72,6 +72,7 @@ function Homepage() {
       <div className="bg-black w-full h-full mt-20 mb-10">
         {smallFilmEditing && (
           <FilmDetails
+            detailsEditing={smallFilmEditing}
             closeDetails={closeDetails}
             img={smallFilmEditing.poster_path}
             title={smallFilmEditing.title}
@@ -81,7 +82,6 @@ function Homepage() {
         <div className="flex flex-col items-center">
           <div
             className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative cursor-pointer"
-            onClick={setDetailsEditingHandler}
           >
             <div
               className="w-full h-full z-0"

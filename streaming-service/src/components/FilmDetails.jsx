@@ -1,9 +1,7 @@
-import './FilmDetails.css';
-
 function FilmDetails(props){
 
     return <>
-        <div className="fixed top-0 z-30 h-screen w-full">
+        <div className={`fixed top-0 z-30 h-screen w-full ${props.detailsEditing ? 'opacity-100 duration-500 ease-in-out' : 'opacity-0 duration-500 ease-in-out' } transition-opacity`}>
             <div className="absolute top-0 z-30 bg-black/75 h-full w-full flex justify-center items-center rounded-md">
                 <div className="h-2/3 w-2/3 border-2 border-yellow-600 flex rounded-lg relative z-10">
                     <div className='text-[#ffbb38] absolute top-0 right-0' onClick={() => props.closeDetails()}>
