@@ -23,6 +23,7 @@ import Comico from "./components/Category/Comico/Comico"
 import Drammatico from "./components/Category/Drammatico/Drammatico"
 import Azione from "./components/Category/Azione/Azione"
 import Login from "./pages/Login"
+import RegistrationForm from "./pages/Registration"
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Login/>}/>
       <Route path="/homepage" element={<Homepage/>} />
+      <Route path="/registration" element={<RegistrationForm/>}/>
       <Route path="categories" element={<Categories />} />
       <Route path="profile" element={<Profile />} />
       <Route path="others" element={<Others />} />

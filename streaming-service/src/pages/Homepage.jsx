@@ -55,9 +55,9 @@ function Homepage() {
   };
 
   useEffect(() => {
-    fetchDataP()
-    fetchDataUU()
-  },[])
+    fetchDataP();
+    fetchDataUU();
+  },[]);
 
   return (
     <>

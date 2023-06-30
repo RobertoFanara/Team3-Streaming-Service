@@ -19,7 +19,8 @@ const Login = () => {
         <div className="mb-4 text-lg">
           <input className="rounded-3xl border-none bg-[#ffbb38] bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="name" placeholder="*********" />
         </div>
-        <div className="mt-8 flex justify-center text-lg text-black">
+        <p className="text-gray-300">Se non hai un account <Link to="/registration"><span className="font-bold hover:underline">Registrati qui</span></Link></p>
+        <div className="mt-8 flex justify-center text-lg">
         <Link to="/homepage">
           <button type="button" className="rounded-3xl bg-[#ffbb38] bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Login</button>
         </Link>
