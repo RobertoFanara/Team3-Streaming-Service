@@ -8,10 +8,31 @@ const SegnalaProblema = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Segnalazione inviata:', problema);
+    inviaSegnalazione();
     setProblema('');
     setSegnalazioneInviata(true);
   };
+
+  function inviaSegnalazione() {
+    const data = {
+      problema: problema
+    };
+
+    fetch('http://localhost:3000/segnalazione', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(response => response.text())
+      .then(result => {
+        console.log(result);
+      })
+      .catch(error => {
+        console.error('Errore durante l\'invio della segnalazione:', error);
+      });
+  }
 
   return (
     <section className="bg-black text-black py-20">
@@ -38,7 +59,7 @@ const SegnalaProblema = () => {
           </div>
           <button
             type="submit"
-            className="bg-white hover:bg-yellow-600 text-black px-6 py-2 rounded-lg"
+            className="bg-white hover:bg-yellow-600 text-black px-28 py-2 rounded-lg"
           >
             Invia segnalazione
           </button>
