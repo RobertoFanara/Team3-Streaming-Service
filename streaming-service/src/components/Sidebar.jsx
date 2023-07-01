@@ -10,12 +10,12 @@ const friends = [
     },
     {
         name: "Roberto Fanara",
-        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_800_800/0/1684752485758?e=1687986000&v=beta&t=MMMLsg_CqMO6T5YX7DAWpp71wYPuDNhFnwXaMWZAar8",
+        imgprofile: "https://media.licdn.com/dms/image/D4E35AQHAg8qygekrWg/profile-framedphoto-shrink_800_800/0/1684752485758?e=1688806800&v=beta&t=QwA1TF3drTtKUiusMZAYcdsyrVISdY3BVs-ADF8Kv4w",
         online: false
     },
     {
         name: "Paolo Gallitelli",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1687986000&v=beta&t=08H0ZDUJ2V9_tYZrEZSv1hSxbZnRizkVGBsHiOtQ0PU",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQFljUkQCI4c1w/profile-framedphoto-shrink_800_800/0/1684314304253?e=1688806800&v=beta&t=A8jF403AHGoGLjEkwyB1-Ezn9ZWxT3dHs3X0AG3HYoI",
         online: false
     },
     {
@@ -25,17 +25,12 @@ const friends = [
     },
     {
         name: "Danilo Carbone",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_400_400/0/1685623380714?e=1687986000&v=beta&t=j1TYZwmX_iTAcCA86d2RMbwnyAVNFEYZjryCeFGv7mQ",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_800_800/0/1685623380714?e=1688806800&v=beta&t=u3BYD_ta29L2pP_Y4qxz9znpGjiLSESbEIEOD6TOepk",
         online: true
     },
     {
         name: "Giuseppe Bianconi",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_400_400/0/1684178170263?e=1687986000&v=beta&t=dEjQ14DxrYoMMWGOzUo4DBOzI_9WwzSfLH1w-nKFV48",
-        online: true
-    },
-    {
-        name: "Antonio Vecchio",
-        imgprofile: "https://scontent-fco2-1.xx.fbcdn.net/v/t39.30808-6/279222191_1904293366431839_7754633369684283708_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=hhhkt3oCMXAAX8G13ML&_nc_ht=scontent-fco2-1.xx&oh=00_AfBxQEoXmAbdd8fI1_473LzK7k145xiVlkIBSl2F7z6Q0g&oe=64989F7B",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_800_800/0/1684178170263?e=1688806800&v=beta&t=IUriOJZlKBakQn-_drCz0PteCJ9Tt5vAFWgAOaCD4WI",
         online: true
     },
     {
@@ -50,17 +45,17 @@ const friends = [
     },
     {
         name: "Ciccio Pasticcio",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_400_400/0/1684174471975?e=1687986000&v=beta&t=NQsDrOyg55fgO3x1uPcuVwE-jjXbwpVUvGzlRcUuShA",
+        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHOVzGYRFWj_A/profile-framedphoto-shrink_800_800/0/1684174471975?e=1688806800&v=beta&t=Z9ycmvVJeZmouv3YWuzgmryTQ3MeHXQdjbVXWOxsMpI",
         online: false
     },
     {
         name: "Terence Hill",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQHcBE88bLjjQg/profile-framedphoto-shrink_400_400/0/1685623380714?e=1687986000&v=beta&t=j1TYZwmX_iTAcCA86d2RMbwnyAVNFEYZjryCeFGv7mQ",
+        imgprofile: "https://scontent.fcta2-2.fna.fbcdn.net/v/t39.30808-6/312201420_648262233331148_4420671089054634775_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=6Ek-1GC-WLcAX927szE&_nc_ht=scontent.fcta2-2.fna&oh=00_AfB4W-krv5-1evAiVzHjUALY7M6VcdrmywFL55v5fezF7w&oe=64A43E1F",
         online: true
     },
     {
         name: "Bud Spencer",
-        imgprofile: "https://media.licdn.com/dms/image/D4D35AQGfJ4tSAxl5SA/profile-framedphoto-shrink_400_400/0/1684178170263?e=1687986000&v=beta&t=dEjQ14DxrYoMMWGOzUo4DBOzI_9WwzSfLH1w-nKFV48",
+        imgprofile: "https://scontent.fcta2-1.fna.fbcdn.net/v/t39.30808-6/355644899_813959903428955_5923515167126643360_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=okh-inT8MxAAX-cmGZH&_nc_ht=scontent.fcta2-1.fna&oh=00_AfBdmVBJhUuh_yjh-JLTN7jprt11bwK2wbbTGQveQrT1Aw&oe=64A5AEED",
         online: true
     }
 ]
