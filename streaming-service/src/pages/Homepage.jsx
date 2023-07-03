@@ -38,7 +38,7 @@ function Homepage() {
     },
   };
 
-  const fetchDataUpComing = async() => {
+  const fetchDataUpComing = async () => {
     try {
       const response = await fetch(urlUpComing, options);
       const result = await response.json();
@@ -49,8 +49,7 @@ function Homepage() {
     } catch (error) {
       console.log(error);
     }
-  }
-
+  };
 
   const fetchDataP = async () => {
     try {
@@ -101,9 +100,7 @@ function Homepage() {
           />
         )}
         <div className="flex flex-col items-center">
-          <div
-            className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative cursor-pointer"
-          >
+          <div className="flex border-2 border-[RGB(255,187,56)] rounded-[20px] w-[870px] h-[450px] m-5 overflow-hidden relative cursor-pointer">
             <div
               className="w-full h-full z-0"
               style={{
@@ -229,19 +226,22 @@ function Homepage() {
               <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                 {filmsListP.map((film, key) => {
                   return (
-                    <div
-                      style={{
-                        background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
-                        backgroundSize: "cover",
-                      }}
-                      className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`}
-                      key={key}
-                      onClick={() => setDetailsEditingHandler(film)}
-                    >
-                      <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
+                    <>
+                    <div>
+                      <div
+                        style={{
+                          background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
+                          backgroundSize: "cover",
+                        }}
+                        className={`border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer flex flex-col`}
+                        key={key}
+                        onClick={() => setDetailsEditingHandler(film)}
+                      ></div>
+                      <p className="z-10 text-[RGB(255,187,56)] text-center text-[20px] max-w-[300px] p-2 rounded-md">
                         {film.title}
                       </p>
                     </div>
+                  </>
                   );
                 })}
               </div>
@@ -254,20 +254,22 @@ function Homepage() {
                 <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                   {filmsListUU.map((film, key) => {
                     return (
-                      <div
-                        style={{
-                          background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
-                          backgroundSize: "cover",
-                        }}
-                        className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`}
-                        key={key}
-                        onClick={() => setDetailsEditingHandler(film)}
-                      >
-                        <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                          {film.title}
-                        </p>
-
-                      </div>
+                      <>
+                        <div>
+                          <div
+                            style={{
+                              background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
+                              backgroundSize: "cover",
+                            }}
+                            className={`border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer flex flex-col`}
+                            key={key}
+                            onClick={() => setDetailsEditingHandler(film)}
+                          ></div>
+                          <p className="z-10 text-[RGB(255,187,56)] text-center text-[20px] max-w-[300px] p-2 rounded-md">
+                            {film.title}
+                          </p>
+                        </div>
+                      </>
                     );
                   })}
                 </div>
@@ -281,20 +283,22 @@ function Homepage() {
                 <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
                   {filmsListUpComing.map((film, key) => {
                     return (
-                      <div
-                        style={{
-                          background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
-                          backgroundSize: "cover",
-                        }}
-                        className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`}
-                        key={key}
-                        onClick={() => setDetailsEditingHandler(film)}
-                      >
-                        <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
-                          {film.title}
-                        </p>
-
-                      </div>
+                      <>
+                        <div>
+                          <div
+                            style={{
+                              background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
+                              backgroundSize: "cover",
+                            }}
+                            className={`border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer flex flex-col`}
+                            key={key}
+                            onClick={() => setDetailsEditingHandler(film)}
+                          ></div>
+                          <p className="z-10 text-[RGB(255,187,56)] text-center text-[20px] max-w-[300px] p-2 rounded-md">
+                            {film.title}
+                          </p>
+                        </div>
+                      </>
                     );
                   })}
                 </div>
