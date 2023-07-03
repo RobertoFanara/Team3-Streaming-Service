@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 function Homepage() {
   const [filmsListUU, setFilmsListUU] = useState([]);
   const [filmsListP, setFilmsListP] = useState([]);
+  const [filmsListUpComing, setFilmsListUpComing] = useState([]);
   const [detailsEditing, setDetailsEditing] = useState(false);
   const [smallFilmEditing, setSmallFilmEditing] = useState(null);
 
@@ -25,6 +26,9 @@ function Homepage() {
   const urlP =
     "https://api.themoviedb.org/3/movie/popular?language=it-IT&page=1&region=IT";
 
+  const urlUpComing =
+    "https://api.themoviedb.org/3/movie/upcoming?language=it-IT&page=1&region=IT";
+
   const options = {
     method: "GET",
     headers: {
@@ -33,6 +37,20 @@ function Homepage() {
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzY2NTljNWIxZDBiNzU5ZjNmOGZhOWIxOWY5M2YxMCIsInN1YiI6IjY0OTllYTFlZWI3OWMyMDBjNTZlYmZhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v3wbOTjVH2pMXzwC51-uSLuFRn9bT6l3tu5KZNXIDiA",
     },
   };
+
+  const fetchDataUpComing = async() => {
+    try {
+      const response = await fetch(urlUpComing, options);
+      const result = await response.json();
+      console.log(result.results);
+      setFilmsListUpComing(
+        result.results.filter((item, index) => index < 6).map((arr) => arr)
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   const fetchDataP = async () => {
     try {
@@ -63,6 +81,7 @@ function Homepage() {
   useEffect(() => {
     fetchDataP();
     fetchDataUU();
+    fetchDataUpComing();
   }, []);
 
   return (
@@ -77,6 +96,8 @@ function Homepage() {
             img={smallFilmEditing.poster_path}
             title={smallFilmEditing.title}
             trama={smallFilmEditing.overview}
+            vote={smallFilmEditing.vote_average}
+            releaseDate={smallFilmEditing.release_date}
           />
         )}
         <div className="flex flex-col items-center">
@@ -245,6 +266,34 @@ function Homepage() {
                         <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
                           {film.title}
                         </p>
+
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="m-10 border-t border-[#ffbb38] pt-10">
+              <div className="flex flex-col justify-start w-[950px] ">
+                <p className="text-white text-[40px] font-bold mb-5">
+                  In uscita
+                </p>
+                <div className="flex flex-wrap gap-5 mt-[15px] justify-center">
+                  {filmsListUpComing.map((film, key) => {
+                    return (
+                      <div
+                        style={{
+                          background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
+                          backgroundSize: "cover",
+                        }}
+                        className={`relative border-2 border-[RGB(255,187,56)] h-[250px] w-[300px] rounded-[20px] cursor-pointer`}
+                        key={key}
+                        onClick={() => setDetailsEditingHandler(film)}
+                      >
+                        <p className="absolute bottom-5 left-2 z-10 text-[RGB(255,187,56)] text-[20px] bg-black/75 p-2 rounded-md">
+                          {film.title}
+                        </p>
+
                       </div>
                     );
                   })}
