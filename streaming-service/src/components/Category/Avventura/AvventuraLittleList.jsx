@@ -1,7 +1,8 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 const AvventuraLittleList = () => {
+    const [filmsListAnimation, setFilmsListAnimation] = useState([]);
 
     const handleScrollRight = () => {
         useEffect(() => {
@@ -33,7 +34,34 @@ const AvventuraLittleList = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
+      const api = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=12`;
+        
+      const options = {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            Authorization:
+              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzY2NTljNWIxZDBiNzU5ZjNmOGZhOWIxOWY5M2YxMCIsInN1YiI6IjY0OTllYTFlZWI3OWMyMDBjNTZlYmZhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v3wbOTjVH2pMXzwC51-uSLuFRn9bT6l3tu5KZNXIDiA",
+          },
+        };
 
+      const fetchDataAnimazione = async () => {
+          try {
+            const response = await fetch(api, options);
+            const result = await response.json();
+            console.log(result.results);
+            setFilmsListAnimation(
+              result.results.filter((item, index) => index < 6).map((arr) => arr)
+            );
+          } catch (error) {
+            console.log(error);
+          }
+        };
+      
+      useEffect(() => {
+              fetchDataAnimazione()
+          },[]
+      )
     return(
         <>
             <div className="w-full text-white">
@@ -47,101 +75,34 @@ const AvventuraLittleList = () => {
                     </div>
 
                     <div className="slider2 flex gap-4 mt-2 overflow-auto overflow-x-hidden h-[225px]">
-                        <a href="" className="w-[350px]">
-                        <div className=" w-[350px] h-[100%] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2003/09/001/covermd_home.jpg')] bg-cover flex items-center justify-center">
-                        <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col items-center">
-                            <div className="w-fit mx-auto">Pirati dei Caraibi</div>
-                            <div className="flex items-center justify-center">
-                                <div className="w-[20px] h-[20px]">
-                                    <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
-	                                C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
-	                                c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
+                    {filmsListAnimation.map((film, key) => {
+                            return(
+                                <a href="" className="w-[350px]">
+                                <div 
+                                    style={{
+                                        background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                      }}
+                                    className=" w-[350px] h-[100%] rounded-lg relative  bg-cover bg-center flex items-center justify-center"
+                                    key={key}
+                                    >
+                                    
+                                    <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col items-center">
+                                    <div className="w-fit mx-auto">{film.title}</div>
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-[20px] h-[20px]">
+                                            <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
+                                            C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
+                                            c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
+                                        </div>
+                                        <div className="text-sm">{film.vote_average}</div>
+                                    </div>
                                 </div>
-                                <div className="text-sm">8.1</div>
                             </div>
-                        </div>
-                    </div>
-                        </a>
-
-                        <a href="" className="w-[350px]">
-                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://occ-0-395-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf2NpNhZsRSLwu3n0KhysCBpHNRlTQu86BLXuxSsleAMrjLNF6G0COGO2-s8YUywD64vHPiX5knGmTkMgF6A002TGi6eilpE329N.jpg?r=7c6')] bg-cover flex align-center justify-center">
-                        <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
-                            <div className="w-fit mx-auto">Don't Look Up</div>
-                            <div className="flex align-center justify-center">
-                                <div className="w-[20px] h-[20px]">
-                                    <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
-	                                C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
-	                                c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
-                                </div>
-                                <div className="text-sm">7.1</div>
-                            </div>
-                        </div>
-                    </div>
-                        </a>
-                        
-                        <a href="" className="w-[350px]">
-                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://www.sorrisi.com/wp-content/uploads/2019/07/jumanji-the-next-level.jpg')] bg-cover flex align-center justify-center">
-                        <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
-                            <div className="w-fit mx-auto">Jumanji</div>
-                            <div className="flex align-center justify-center">
-                                <div className="w-[20px] h-[20px]">
-                                    <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
-	                                C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
-	                                c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
-                                </div>
-                                <div className="text-sm">7.8</div>
-                            </div>
-                        </div>
-                    </div>
-                        </a>
-
-                        <a href="" className="w-[350px]">
-                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://www.focus.it/site_stored/imgs/0004/011/spider-man-2002.1020x680.jpg')] bg-cover flex align-center justify-center">
-                        <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
-                            <div className="w-fit mx-auto">Spiderman</div>
-                            <div className="flex align-center justify-center">
-                                <div className="w-[20px] h-[20px]">
-                                    <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
-	                                C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
-	                                c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
-                                </div>
-                                <div className="text-sm">9.1</div>
-                            </div>
-                        </div>
-                    </div>
-                        </a>
-
-                        <a href="" className="w-[350px]">
-                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://media-assets.wired.it/photos/615c4917be48be4873e7de03/master/w_1600%2Cc_limit/wired_placeholder_dummy.png')] bg-cover flex align-center justify-center">
-                        <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
-                            <div className="w-fit mx-auto">Interstellar</div>
-                            <div className="flex align-center justify-center">
-                                <div className="w-[20px] h-[20px]">
-                                    <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
-	                                C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
-	                                c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
-                                </div>
-                                <div className="text-sm">9.8</div>
-                            </div>
-                        </div>
-                    </div>
-                        </a>
-
-                        <a href="" className="w-[350px]">
-                    <div className="w-[350px] h-[100%] rounded-lg relative bg-[url('https://pad.mymovies.it/filmclub/2017/10/059/coverlg_home.jpg')] bg-cover flex align-center justify-center">
-                        <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col align-center">
-                            <div className="w-fit mx-auto">Fast & Furious 9</div>
-                            <div className="flex align-center justify-center">
-                                <div className="w-[20px] h-[20px]">
-                                    <svg className="fill-yellow-400" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" id="star"><path d="M22,10.1c0.1-0.5-0.3-1.1-0.8-1.1l-5.7-0.8L12.9,3c-0.1-0.2-0.2-0.3-0.4-0.4C12,2.3,11.4,2.5,11.1,3L8.6,8.2L2.9,9
-	                                C2.6,9,2.4,9.1,2.3,9.3c-0.4,0.4-0.4,1,0,1.4l4.1,4l-1,5.7c0,0.2,0,0.4,0.1,0.6c0.3,0.5,0.9,0.7,1.4,0.4l5.1-2.7l5.1,2.7
-	                                c0.1,0.1,0.3,0.1,0.5,0.1l0,0c0.1,0,0.1,0,0.2,0c0.5-0.1,0.9-0.6,0.8-1.2l-1-5.7l4.1-4C21.9,10.5,22,10.3,22,10.1z"></path></svg>
-                                </div>
-                                <div className="text-sm">6.8</div>
-                            </div>
-                        </div>
-                    </div>
-                        </a>
+                                </a>
+                            )
+                        })}
                     
                         <Link to={"/avventura"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center text-black hover:text-white transition duration-200 ease-in">    
                                 <div className="w-[100px] flex items-center justify-center ">

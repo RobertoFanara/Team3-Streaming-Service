@@ -24,6 +24,11 @@ import Drammatico from "./components/Category/Drammatico/Drammatico"
 import Azione from "./components/Category/Azione/Azione"
 import Login from "./pages/Login"
 import RegistrationForm from "./pages/Registration"
+import AnimazioneSecondPage from "./components/Category/Animazione/AnimazioneSecondPage"
+import AvventuraSecondPage from "./components/Category/Avventura/AvventuraSecondPage"
+import ComicoSecondPage from "./components/Category/Comico/ComicoSecondPage"
+import AzioneSecondPage from "./components/Category/Azione/AzioneSecondPage"
+import DrammaticoSecondPage from "./components/Category/Drammatico/DrammaticoSecondPage"
 
 function App() {
 
@@ -40,10 +45,15 @@ function App() {
       <Route path="others" element={<Others />} />
       <Route path="othersSecondPage" element={<OtherSecondPage />}/>
       <Route path="animazione" element={<Animazione />} />
+      <Route path="animazioneSecondPage" element={<AnimazioneSecondPage />} />
       <Route path="azione" element={<Azione />} />
+      <Route path="azioneSecondPage" element={<AzioneSecondPage />} />
       <Route path="avventura" element={<Avventura />}/>
+      <Route path="avventuraSecondPage" element={<AvventuraSecondPage />}/>
       <Route path="drammatico" element={<Drammatico />}/>
+      <Route path="drammaticoSecondPage" element={<DrammaticoSecondPage />}/>
       <Route path="comico" element={<Comico />}/>
+      <Route path="comicoSecondPage" element={<ComicoSecondPage />}/>
       <Route path="/chi-siamo" element={<ChiSiamo />} />
       <Route path="/contattaci" element={<Contattaci />} />
       <Route path="/termini-servizio" element={<TerminiDiServizio />} />

@@ -20,6 +20,9 @@ const Categories = () => {
             setDetailsEditing(false)
         }
       }
+
+
+
     return(
         <>
         <Sidebar/>
@@ -31,9 +34,9 @@ const Categories = () => {
                 <OthersLittleList />
                 <AzioneLittleList/>
                 <AnimazioneLittleList />
-                <AvventuraLittleList />
                 <ComicoLittleList />
                 <DrammaticoLittleList />
+                <AvventuraLittleList />
 
             </div>
         </div>

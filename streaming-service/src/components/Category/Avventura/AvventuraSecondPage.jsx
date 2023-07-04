@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom"
-import Sidebar from "../../Sidebar";
 import Navbar from "../../Navbar";
-import { useState, useEffect } from "react";
+import { useState , useEffect } from "react";
 
-const Drammatico = () => {
+const AvventuraSecondPage = () => {
     const [filmsListAnimation, setFilmsListAnimation] = useState([]);
     const topFunction = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
-        
-      const api = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=18`;
+      const api = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=12`;
         
       const options = {
           method: "GET",
@@ -27,7 +25,7 @@ const Drammatico = () => {
             const result = await response.json();
             console.log(result.results);
             setFilmsListAnimation(
-              result.results.filter((item, index) => index < 16).map((arr) => arr)
+              result.results.filter((item, index) => index >= 16 && index < 32 ).map((arr) => arr)
             );
           } catch (error) {
             console.log(error);
@@ -38,13 +36,10 @@ const Drammatico = () => {
               fetchDataAnimazione()
           },[]
       )
-  
-
     return(
         <>
-        <Sidebar/>
-        <Navbar/>
-            <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)] pt-[50px] pb-[30px]">
+            <Navbar />
+            <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)] pt-[50px] pb-[30px] "  style={{minHeight: 'calc(100vh - 242px)'}}>
                 <div className="flex border border-black w-[870px] gap-5 flex-wrap">
 
                 <div className="w-[100%] flex flex-wrap gap-5">
@@ -83,18 +78,18 @@ const Drammatico = () => {
                 })}   
 
                 </div>
-
+                     
                      <div className="w-[100%] flex items-center justify-center text-2xl space-x-2">
-                        <div>1</div>
-                        <Link to={"/drammaticoSecondPage"} onClick={topFunction} >
-                            <div>»</div>
+                        <Link to={"/avventura"} onClick={topFunction} >
+                            <div>«</div>
                         </Link>
+                        <div>2</div>
                      </div>
 
                 </div>
             </div>
         </>
     )
-}
+} 
 
-export default Drammatico
+export default AvventuraSecondPage
