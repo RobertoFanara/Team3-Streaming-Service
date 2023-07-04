@@ -95,7 +95,7 @@ function Homepage() {
             img={smallFilmEditing.poster_path}
             title={smallFilmEditing.title}
             trama={smallFilmEditing.overview}
-            vote={smallFilmEditing.vote_average}
+            vote={smallFilmEditing.vote_average == 0 ? 'Ancora nessuna valutazione' : smallFilmEditing.vote_average}
             releaseDate={smallFilmEditing.release_date}
           />
         )}
