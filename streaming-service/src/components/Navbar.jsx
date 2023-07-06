@@ -177,17 +177,6 @@ const handleCategoriesDisappear = () => {
         </div>
 
         <div className="flex top-1 right-[30px] items-center absolute gap-5">
-          <div className="w-[200px]">
-            <button className="bg-[rgb(28,28,28)] ml-[15px] rounded-tl-[5px] rounded-bl-[5px]">
-              🔍︎
-            </button>
-            <input
-              type="text"
-              className="bg-[rgb(28,28,28)] w-[150px] text-base mt-[5px] rounded-tr-[5px] rounded-br-[5px] text-white"
-              placeholder=" Search"
-            />
-          </div>
-
           <div className="flex justify-center items-center gap-2">
             <img
               src="/src/assets/images/bell.svg"
