@@ -29,13 +29,13 @@ const AvventuraLittleList = () => {
             })
         })
     }
-    
+
     const topFunction = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
       const api = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=12`;
-        
+
       const options = {
           method: "GET",
           headers: {
@@ -57,15 +57,15 @@ const AvventuraLittleList = () => {
             console.log(error);
           }
         };
-      
+
       useEffect(() => {
               fetchDataAnimazione()
           },[]
       )
     return(
         <>
-            <div className="w-full text-white">
-                <div>Avventura</div>
+            <div className="w-full text-white border-t border-[#ffbb38] pt-10 my-10">
+                <div className="text-[30px] font-bold mb-5">Avventura</div>
                 <div className= "relative">
 
                 <div className="before-arrow2 absolute bg-trasparent w-[50px] h-full flex justify-center items-center z-50" onClick={handleScrollLeft()}>
@@ -78,7 +78,7 @@ const AvventuraLittleList = () => {
                     {filmsListAnimation.map((film, key) => {
                             return(
                                 <a href="" className="w-[350px]">
-                                <div 
+                                <div
                                     style={{
                                         background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
                                         backgroundSize: "cover",
@@ -87,7 +87,7 @@ const AvventuraLittleList = () => {
                                     className=" w-[350px] h-[100%] rounded-lg relative  bg-cover bg-center flex items-center justify-center"
                                     key={key}
                                     >
-                                    
+
                                     <div className="absolute  bottom-[10px] w-fit h-[45px] flex flex-col items-center">
                                     <div className="w-fit mx-auto">{film.title}</div>
                                     <div className="flex items-center justify-center">
@@ -103,14 +103,14 @@ const AvventuraLittleList = () => {
                                 </a>
                             )
                         })}
-                    
-                        <Link to={"/avventura"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center text-black hover:text-white transition duration-200 ease-in">    
+
+                        <Link to={"/avventura"} onClick={topFunction} className="w-[100px] rounded-lg mr-8 flex items-center bg-[RGB(255,187,56)]  justify-center text-black hover:text-white transition duration-200 ease-in">
                                 <div className="w-[100px] flex items-center justify-center ">
-                                    <div className="h-[20px] w-fit text-inherit">See Other</div>    
+                                    <div className="h-[20px] w-fit text-inherit">See Other</div>
                                 </div>
                         </Link>
 
-                        
+
 
                     <div className="after-arrow2 absolute end-0 bg-trasparent w-[50px] h-full z-10 flex justify-center items-center" onClick={handleScrollRight()}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -120,7 +120,7 @@ const AvventuraLittleList = () => {
                     </div>
                 </div>
 
-                
+
             </div>
         </>
     )
