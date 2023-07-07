@@ -108,7 +108,7 @@ function Homepage() {
                   .filter((item, index) => index === 0)
                   .map((film) => film.poster_path)}')`,
                 backgroundSize: "cover",
-                backgroundPosition: "center top",
+                backgroundPosition: "center center",
               }}
             ></div>
             <div className="flex z-10 absolute w-full h-full">

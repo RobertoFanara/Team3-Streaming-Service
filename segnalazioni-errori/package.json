@@ -17,6 +17,7 @@
     "nodemailer": "^6.9.3",
     "nodemailer-stub-transport": "^1.1.0",
     "nodemon": "^2.0.22",
+    "passport": "^0.6.0",
     "pg-promise": "^11.5.0"
   }
 }

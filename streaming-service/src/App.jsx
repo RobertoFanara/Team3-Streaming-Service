@@ -29,15 +29,21 @@ import AvventuraSecondPage from "./components/Category/Avventura/AvventuraSecond
 import ComicoSecondPage from "./components/Category/Comico/ComicoSecondPage"
 import AzioneSecondPage from "./components/Category/Azione/AzioneSecondPage"
 import DrammaticoSecondPage from "./components/Category/Drammatico/DrammaticoSecondPage"
+import { useState } from "react"
 
 function App() {
+
+  const [isLogged, setIsLogged] = useState(false);
+  const handleLogin = () => {
+    setIsLogged(true);
+  }
 
 
   return(
     <>
     <BrowserRouter>
       <Routes>
-      <Route path="/" element={<Login/>}/>
+      <Route path="/" element={<Login onLogin={handleLogin}/>}/>
       <Route path="/homepage" element={<Homepage/>} />
       <Route path="/registration" element={<RegistrationForm/>}/>
       <Route path="categories" element={<Categories />} />
