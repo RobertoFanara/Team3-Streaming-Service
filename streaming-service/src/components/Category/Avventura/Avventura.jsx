@@ -2,16 +2,30 @@ import { Link } from "react-router-dom"
 import Sidebar from "../../Sidebar";
 import Navbar from "../../Navbar";
 import { useState, useEffect } from "react";
+import FilmDetails from "../../FilmDetails";
 
 const Avventura = () => {
     const [filmsListAnimation, setFilmsListAnimation] = useState([]);
+
+    const [detailsEditing, setDetailsEditing] = useState(false);
+    const [smallFilmEditing, setSmallFilmEditing] = useState(null);
+
+    const setDetailsEditingHandler = (film) => {
+      setSmallFilmEditing(film);
+      setDetailsEditing(true);
+    };
+
+    const closeDetails = () => {
+      setDetailsEditing(false);
+      setSmallFilmEditing(null);
+    };
     const topFunction = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
       }
 
-      
+
       const api = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=12`;
-        
+
       const options = {
           method: "GET",
           headers: {
@@ -33,36 +47,48 @@ const Avventura = () => {
             console.log(error);
           }
         };
-      
+
       useEffect(() => {
               fetchDataAnimazione()
           },[]
       )
-  
+
     return(
         <>
         <Sidebar/>
         <Navbar/>
             <div className="flex item-center justify-center mt-10 text-[RGB(255,187,56)] pt-[50px] pb-[30px]">
+            {smallFilmEditing && (
+          <FilmDetails
+            detailsEditing={smallFilmEditing}
+            closeDetails={closeDetails}
+            img={smallFilmEditing.poster_path}
+            title={smallFilmEditing.title}
+            trama={smallFilmEditing.overview}
+            vote={smallFilmEditing.vote_average == 0 ? 'Ancora nessuna valutazione' : smallFilmEditing.vote_average}
+            releaseDate={smallFilmEditing.release_date}
+          />
+        )}
                 <div className="flex border border-black w-[870px] gap-5 flex-wrap">
 
                 <div className="w-[100%] flex flex-wrap gap-5">
 
                 {filmsListAnimation.map((film, key) => {
                     return(
-                        <a href="" className="mb-4 w-[23.25%] hover:text-white transition duration-300 ease-in-out">
-                        <div 
+                        <div className="mb-4 w-[23.25%] hover:text-white transition duration-300 ease-in-out cursor-pointer">
+                        <div
                             className="w-[100%] h-[250px] rounded-lg relative  flex align-center justify-center border border-[RGB(255,187,56)]"
                             style={{
                                 background: `url('https://image.tmdb.org/t/p/original/${film.poster_path}')`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
                               }}
-                              key={key}>
-                         
+                              key={key}
+                              onClick={() => setDetailsEditingHandler(film)}>
+
                             <div className="absolute hover:stroke-white stroke-[rgb(255,187,65)] transition duration-200 ease-in-out">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="absolute top-[210px] left-[60px] w-[35px] h-[35px] stroke-inherit z-20 cursor-pointer"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-    
+
                             </div>
                         </div>
                         <div className="bottom-[10px] w-[100%] h-[45px] flex flex-col align-center text-center">
@@ -76,10 +102,10 @@ const Avventura = () => {
                                     <div className="text-sm">{film.vote_average}</div>
                                 </div>
                             </div>
-                            </a>
-    
+                            </div>
+
                     )
-                })}   
+                })}
                 </div>
 
                      <div className="w-[100%] flex items-center justify-center text-2xl space-x-2">

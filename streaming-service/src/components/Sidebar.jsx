@@ -92,7 +92,9 @@ function Sidebar(){
                                 return post;
                                 }
                             }).map((item, key) => {
-                                return (<>
+                                return (
+                                    <>
+                                    {item.online && <>
                                         <Link to={`${item.name === 'Gabrimarche_' ? "/profile" : ''}`}>
                                         <div className="flex flex-column-reverse h-20 items-center gap-5 text-slate-200 hover:bg-[#2a2a2a] cursor-pointer rounded-md" key={key} onClick={setEditingHandler}>
                                         <img src={item.imgprofile} className="rounded-full h-16 w-16 bg-cover bg-center"/>
@@ -100,6 +102,7 @@ function Sidebar(){
                                         {item.online && <div className="ml-auto mr-5 rounded-full bg-green-500 h-3 w-3"></div>}
                                         </div>
                                         </Link>
+                                    </> }
                                     </>)
                             })}
                         </div>
