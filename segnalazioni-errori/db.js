@@ -1,7 +1,7 @@
 const pgPromise = require("pg-promise");
 
 const pgp = pgPromise()
-const db = pgp("postgres://postgres:AlfioPaffo30@localhost:5432/stream3")
+const db = pgp("postgres://postgres:Mitico1!@localhost:5432/stream-3")
 
 const setupDb = async () => {
     await db.none(`

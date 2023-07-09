@@ -29,17 +29,6 @@ const Comico = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const api = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=35`;
-
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzY2NTljNWIxZDBiNzU5ZjNmOGZhOWIxOWY5M2YxMCIsInN1YiI6IjY0OTllYTFlZWI3OWMyMDBjNTZlYmZhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v3wbOTjVH2pMXzwC51-uSLuFRn9bT6l3tu5KZNXIDiA",
-    },
-  };
-
   const fetchDataAnimazione = async () => {
     try {
       const response = await fetch(api, options);

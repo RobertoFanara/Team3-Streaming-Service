@@ -6,43 +6,33 @@ import FilmDetails from "../../FilmDetails";
 
 const Azione = () => {
   const [filmsListAnimation, setFilmsListAnimation] = useState([]);
-
-      
-      const api ='https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=it-IT&page=1&region=IT&sort_by=popularity.desc&with_genres=28';
-        
-      const options = {
-          method: "GET",
-          headers: {
-            accept: "application/json",
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzY2NTljNWIxZDBiNzU5ZjNmOGZhOWIxOWY5M2YxMCIsInN1YiI6IjY0OTllYTFlZWI3OWMyMDBjNTZlYmZhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v3wbOTjVH2pMXzwC51-uSLuFRn9bT6l3tu5KZNXIDiA",
-          },
-        };
-
+  const [detailsEditing, setDetailsEditing] = useState(false);
+  const [smallFilmEditing, setSmallFilmEditing] = useState(null);    
+  
   const setDetailsEditingHandler = (film) => {
     setSmallFilmEditing(film);
     setDetailsEditing(true);
   };
-
+  
   const closeDetails = () => {
     setDetailsEditing(false);
     setSmallFilmEditing(null);
   };
-
+  
   const topFunction = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const api = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=28`;
-
+  const api ='https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=it-IT&page=1&region=IT&sort_by=popularity.desc&with_genres=28';
+    
   const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzY2NTljNWIxZDBiNzU5ZjNmOGZhOWIxOWY5M2YxMCIsInN1YiI6IjY0OTllYTFlZWI3OWMyMDBjNTZlYmZhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v3wbOTjVH2pMXzwC51-uSLuFRn9bT6l3tu5KZNXIDiA",
-    },
-  };
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzY2NTljNWIxZDBiNzU5ZjNmOGZhOWIxOWY5M2YxMCIsInN1YiI6IjY0OTllYTFlZWI3OWMyMDBjNTZlYmZhYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v3wbOTjVH2pMXzwC51-uSLuFRn9bT6l3tu5KZNXIDiA",
+      },
+    };
 
   const fetchDataAnimazione = async () => {
     try {
